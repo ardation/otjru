@@ -1,0 +1,7 @@
+(function(global){var buildMap={};define({version:"0.3.0",load:function(name,req,load,config){if(!config){config=require.rawConfig;}
+var module=config.use&&config.use[name];if(!module){throw new TypeError("Module '"+name+"' is undefined or does not"+" have a `use` config. Make sure it exists, add a `use` config, or"+" don't use use! on it");}
+buildMap[name]={deps:module.deps||[],attach:module.attach};req(module.deps||[],function(){var depArgs=arguments;req([name],function(){var attach=module.attach;if(config.isBuild){return load();}
+if(typeof attach==="function"){return load(attach.apply(global,depArgs));}
+return load(global[attach]);});});},write:function(pluginName,moduleName,write){var module=buildMap[moduleName];var deps=module.deps;var normalize={attach:null,deps:""};if(typeof module.attach==="function"){normalize.attach=module.attach.toString();}else{normalize.attach=["function() {","return typeof ",String(module.attach)," !== \"undefined\" ? ",String(module.attach)," : void 0;","}"].join("");}
+if(deps.length){normalize.deps="'"+deps.toString().split(",").join("','")+"'";}
+write(["define('",pluginName,"!",moduleName,"', ","[",normalize.deps,"], ",normalize.attach,");\n"].join(""));}});})(this);
