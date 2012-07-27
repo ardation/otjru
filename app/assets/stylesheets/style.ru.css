@@ -1,0 +1,17 @@
+.button {
+	line-height: 58px;
+	font-size: 30px;
+}
+.question {
+	color:#f00;
+}
+#step3 .question {
+	font-size: 24px;
+}
+#step6 .next {
+margin-top: 95px;
+}
+@media screen and (max-width:800px) {
+	#step6 .next {
+		margin-top: 0px;
+	}

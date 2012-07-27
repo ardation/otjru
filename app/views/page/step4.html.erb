@@ -1,0 +1,23 @@
+<div id="step4">
+	<div class="option_position">
+		<div class="question"><%=t :spiritual_question %></div>
+		<label class="label_radio" for="options">
+			<input type="radio" id="options" name="sj" value="Find out more about my options">
+			<%=t :spiritual_opt1 %>
+		</label>
+		<label class="label_radio" for="more">
+			<input type="radio" id="more" name="sj" value="Hear more about StudentLife">
+			<%=t :spiritual_opt2 %>
+		</label>
+		<label class="label_radio" for="grow">
+			<input type="radio" id="grow" name="sj" value="Grow closer to God">
+			<%=t :spiritual_opt3 %>
+		</label>
+		<label class="label_radio" for="nowhere">
+			<input type="radio" id="nowhere" name="sj" value="Go nowhere">
+			<%=t :spiritual_opt4 %>
+		</label>
+	</div>
+	<div class="error"><strong><%=t :forgot %></strong> <%= t :spiritual_error %></div>
+	<a class="button next"><%=t :next %></a>
+</div>

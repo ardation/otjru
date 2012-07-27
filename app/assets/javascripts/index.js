@@ -74,9 +74,9 @@ function(namespace, Backbone) {
     },
     checkpage: function(page) {
       if ( amplify.store('currentpage') != undefined ) {
-        if( amplify.store('currentpage') != page ) {
+        if( amplify.store('currentpage') != page.replace(I18n.locale  + '/','') ) {
           //saved page does not match
-          window.location = document.location.protocol + '//' + document.location.host + '/' + amplify.store('currentpage');
+          window.location = '/'+ I18n.locale +'/' + amplify.store('currentpage');
         }
       } else {
         //there is no saved page
@@ -100,7 +100,8 @@ function(namespace, Backbone) {
     pushrecords: function() {
       var records = amplify.store('records');
       _.each(records, function(value) {
-        $.post('http://s1.studentlife.org.nz/index.php/api/journey/user/format/json', value , 'json')
+        amplify.store('records', _.without(records, value));
+        /*$.post('http://s1.studentlife.org.nz/index.php/api/journey/user/format/json', value , 'json')
         .success(function() {
           amplify.store('records', _.without(records, value));
         })
@@ -108,13 +109,13 @@ function(namespace, Backbone) {
           if(data.responseText == '"Phone Number already exists in the system."') {
             amplify.store('records', _.without(records, value));
           }
-        });
+        });*/
       });
     }
   });
 
   index.Views.step1 = Backbone.View.extend({
-    template: "app/templates/step1.html",
+    template: I18n.locale + "/page/step1",
 
     render: function(done) {
       var view = this;
@@ -132,7 +133,7 @@ function(namespace, Backbone) {
   });
 
   index.Views.step2 = Backbone.View.extend({
-    template: "app/templates/step2.html",
+    template: I18n.locale + "/page/step2",
     events: {
       'click .next': 'next',
       'focus input': 'empty',
@@ -173,7 +174,7 @@ function(namespace, Backbone) {
   });
 
   index.Views.step3 = Backbone.View.extend({
-    template: "app/templates/step3.html",
+    template: I18n.locale + "/page/step3",
     events: {
       'click .next': 'next',
       'click .label_check': 'labelstyle',
@@ -223,7 +224,7 @@ function(namespace, Backbone) {
   });
 
   index.Views.step4 = Backbone.View.extend({
-    template: "app/templates/step4.html",
+    template: I18n.locale + "/page/step4",
     events: {
       'click .next': 'next',
       "click .label_radio": "labelstyle",
@@ -272,7 +273,7 @@ function(namespace, Backbone) {
   });
 
   index.Views.step5 = Backbone.View.extend({
-    template: "app/templates/step5.html",
+    template: I18n.locale + "/page/step5",
     events: {
       'click .next': 'next',
       "click .label_radio": "labelstyle",
@@ -328,7 +329,7 @@ function(namespace, Backbone) {
   });
 
   index.Views.step6 = Backbone.View.extend({
-    template: "app/templates/step6.html",
+    template: I18n.locale + "/page/step6",
     events: {
       'click .next': 'next',
       'click .label_radio': 'labelstyle',
@@ -368,23 +369,24 @@ function(namespace, Backbone) {
     },
     next: function(event) {
       var phone = /^02\d{7,13}$/
+
       if( $('#fname').val() == '' ) {
-        $('#errorkind').text('Enter your First Name');
+        $('#errorkind').text(I18n.step6_error_fname);
         $('#step6 .error').fadeIn();
       } else if( $('#lname').val() == '' ) {
-        $('#errorkind').text('Enter your Last Name');
+        $('#errorkind').text(I18n.step6_error_lname);
         $('#step6 .error').fadeIn();
       } else if( !$('[name=gender]').is(':checked') ) {
-        $('#errorkind').text('Select your Gender');
+        $('#errorkind').text(I18n.step6_error_gender);
         $('#step6 .error').fadeIn();
       } else if( $('#mobile').val() == '' ||  !phone.test($('#mobile').val()) ) {
-        $('#errorkind').text('Enter your valid NZ Mobile Number');
+        $('#errorkind').text(I18n.step6_error_mobile);
         $('#step6 .error').fadeIn();
       } else if( $('#major').val() == 'Area of Study' ) {
-        $('#errorkind').text('Select your area of Study');
+        $('#errorkind').text(I18n.step6_error_study);
         $('#step6 .error').fadeIn();
       } else if( !$('[name=year]').is(':checked') ) {
-        $('#errorkind').text('Select your Year');
+        $('#errorkind').text(I18n.step6_error_year);
         $('#step6 .error').fadeIn();
       } else {
         namespace.app.router.navigate('step7', {trigger: true});
@@ -409,7 +411,7 @@ function(namespace, Backbone) {
   });
 
   index.Views.step7 = Backbone.View.extend({
-    template: "app/templates/step7.html",
+    template: I18n.locale + "/page/step7",
     render: function(done) {
       var view = this;
       
@@ -515,7 +517,7 @@ function(namespace, Backbone) {
   });
 
   index.Views.step8 = Backbone.View.extend({
-    template: "app/templates/step8.html",
+    template: I18n.locale + "/page/step8",
     events: {
       'click .next': 'next',
     },
@@ -538,7 +540,7 @@ function(namespace, Backbone) {
   });
 
   index.Views.kennedy = Backbone.View.extend({
-    template: "app/templates/kennedy.html",
+    template: I18n.locale + "/page/kennedy",
     events: {
       'click .next': 'next',
       "click .label_radio": "labelstyle",
@@ -587,7 +589,7 @@ function(namespace, Backbone) {
   });
 
   index.Views.data = Backbone.View.extend({
-    template: "app/templates/data.html",
+    template: I18n.locale + "/page/data",
     events: {
       'click .next': 'next',
       "click .label_radio, .label_check": "labelstyle",
@@ -651,33 +653,34 @@ function(namespace, Backbone) {
       });
     },
     next: function(event) {
-      var phone = /^0\d{7,14}$/
+      var phone = /^\d{6,14}$/
 
       if( !$('#locality').val() )
-        $('#data .error').html('Enter a location').fadeIn();
+        $('#data .error').text('Enter a location').fadeIn();
 
       else if( !$('[name=sj]').is(':checked') )
-        $('#data .error').html('Make a selection about Spiritual Journey').fadeIn();
+        $('#data .error').text('Make a selection about Spiritual Journey').fadeIn();
 
       else if( !$('[name=interest]').is(':checked') )
-        $('#data .error').html('Make a selection to Beginning Journey').fadeIn();
+        $('#data .error').text('Make a selection to Beginning Journey').fadeIn();
       
       else if( $('#fname').val() == '' )
-        $('#data .error').text('Enter First Name').fadeIn();
+        $('#data .error').text(I18n.step6_error_fname).fadeIn();
 
       else if( $('#lname').val() == '' )
-        $('#data .error').text('Enter Last Name').fadeIn();
+        $('#data .error').text(I18n.step6_error_lname).fadeIn();
 
       else if( !$('[name=gender]').is(':checked') )
-        $('#data .error').text('Select Gender').fadeIn();
+        $('#data .error').text(I18n.step6_error_gender).fadeIn();
       else if( $('#mobile').val() == '' ||  !phone.test($('#mobile').val()) )
-        $('#data .error').text('Enter valid NZ Mobile Number').fadeIn();
+        $('#data .error').text(I18n.step6_error_mobile).fadeIn();
 
       else if( $('#major').val() == 'Area of Study' )
-        $('#data .error').text('Select Area of Study').fadeIn();
+        $('#data .error').text(I18n.step6_error_study).fadeIn();
 
       else if( !$('[name=year]').is(':checked') )
-        $('#data .error').text('Select Year').fadeIn();
+        $('#data .error').text(I18n.step6_error_year).fadeIn();
+      
       
       else {
         namespace.app.router.navigate('step7', {trigger: true});

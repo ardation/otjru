@@ -1,0 +1,39 @@
+<div id="step5">
+	<div class="option_position">
+		<div class="question"><%=t :interest_question %></div>
+		<table><tbody><tr><td>
+			<label class="label_radio" for="i1">
+				<input type="radio" id="i1" name="interest" value="1">
+				<br>1<br><strong><%=t :interest_opt1 %></strong>
+			</label>
+		</td><td>
+			<label class="label_radio hide_small" for="i2">
+				<input type="radio" id="i2" name="interest" value="2">
+				<br>2
+			</label>
+		</td><td>
+			<label class="label_radio" for="i3">
+				<input type="radio" id="i3" name="interest" value="3">
+				<br><span class="non_mobile">3</span><span class="mobile">2</span><br><strong><%=t :interest_opt2 %></strong>
+			</label>
+		</td><td>
+			<label class="label_radio hide_small" for="i4">
+				<input type="radio" id="i4" name="interest" value="4">
+				<br>4
+			</label>
+		</td><td>
+			<label class="label_radio" for="i5">
+				<input type="radio" id="i5" name="interest" value="5">
+				<br><span class="non_mobile">5</span><span class="mobile">3</span><br><strong><%=t :interest_opt3 %></strong>
+			</label>
+		</td><td>
+			<label class="label_radio iaac" for="iaac">
+				<input type="radio" id="iaac" name="interest" value="Already a Christian">
+				<br><%=t :interest_opt4 %>
+			</label>
+		</td></tr></tbody></table>
+
+	</div>
+	<div class="error"><strong><%=t :forgot %></strong> <%= t :interest_error %></div>
+	<a class="button next"><%=t :next %></a>
+</div>

@@ -4,7 +4,7 @@ require([
   "jquery",
   "use!backbone", 
   // Modules
-  "modules/index",
+  "index",
   "google",
   "use!transit",
   "use!peel",
@@ -120,19 +120,7 @@ function(namespace, $, Backbone, Index, google) {
               'disableDoubleClickZoom': false,
               'scrollwheel': false
             };
-            if(Backbone.Page.campus == 'auckland')
-              google.addMapToCanvas( mapCanvas, myOptions, -36.827852,174.757996);
-            else if(Backbone.Page.campus == 'waikato')
-              google.addMapToCanvas( mapCanvas, myOptions, -37.780454,175.278931);
-            else if(Backbone.Page.campus == 'palmy')
-              google.addMapToCanvas( mapCanvas, myOptions, -40.345992,175.608521);
-            else if(Backbone.Page.campus == 'wellington')
-              google.addMapToCanvas( mapCanvas, myOptions, -41.273621,174.777985);
-            else if(Backbone.Page.campus == 'canterbury')
-              google.addMapToCanvas( mapCanvas, myOptions, -43.522608,172.634277);
-            else if(Backbone.Page.campus == 'otago')
-              google.addMapToCanvas( mapCanvas, myOptions, -45.866284, 170.511522);
-
+            google.addMapToCanvas( mapCanvas, myOptions, 55.781379,37.622375);
             google.autocomplete( $('#locality')[0] );
             google.refresh();
           } else {
@@ -161,8 +149,8 @@ function(namespace, $, Backbone, Index, google) {
         route.stepTransition(el , "#step3", function() {
           $('#magazine').peelback({
             clickURL: 'step3',
-            adImage: 'assets/img/foldable.gif',
-            peelImage: 'assets/img/peel-image.png',
+            adImage: '/assets/foldable.gif',
+            peelImage: '/assets/peel-image.png',
             autoAnimate: true,
             bigSize: 200
           });
@@ -272,7 +260,7 @@ function(namespace, $, Backbone, Index, google) {
     app.router = new Router();
 
     // Trigger the initial route and enable HTML5 History API support
-    Backbone.history.start({ pushState: true });
+    Backbone.history.start({ pushState: true, root: "/" + I18n.locale + "/" });
 
   });
 

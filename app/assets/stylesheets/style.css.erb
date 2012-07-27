@@ -337,10 +337,6 @@ td { vertical-align: top; }
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3 { page-break-after: avoid; }
 }
-
-body {
-  background:url(../img/dark_wall.png) repeat;
-}
 #container {
   z-index:-2;
   position: fixed;
@@ -377,7 +373,7 @@ body {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00001733',GradientType=0 ); /* IE6-8 */
 }
 #upper-foreground div {
-  background:url(../img/stars.png) repeat-x;
+  background:url(<%= asset_path 'stars.png' %>) repeat-x;
   width:100%;
   height:400px;
 }
@@ -393,7 +389,7 @@ body {
   left:0;
   right:0;
   height:200px;
-  background:url(../img/foreground.png) bottom no-repeat;
+  background:url(<%= asset_path 'foreground.png' %>) bottom no-repeat;
 }
 .question {
   line-height:1.1;
@@ -431,7 +427,7 @@ body {
   left:48%;
   margin-top:-227px;
   margin-left:-810px;
-  background:url(../img/studentlife-screen1.png) center center no-repeat;
+  background:url(<%= asset_path 'studentlife-screen1.png' %>) center center no-repeat;
   height:554px;
   width:1536px;
 }
@@ -461,7 +457,7 @@ body {
   right:10px;
   top:10px;
   z-index:15;
-  background:url(../img/light_wool.png) top right repeat;
+  background:url(<%= asset_path 'light_wool.png' %>) top right repeat;
   border-top:10px #21c6f4 solid;
   padding:10px;
   border-radius:0 0 5px 5px;
@@ -479,7 +475,7 @@ body {
   right:0;
 }
 #locality {
-  background:#fff url(../img/marker.png) right 5px no-repeat;
+  background:#fff url(<%= asset_path 'marker.png' %>) right 5px no-repeat;
   font-family: 'Museo-700', Arial;
   border:1px #ccc solid;
   outline:none;
@@ -494,8 +490,8 @@ body {
   margin-top:-160px;
   margin-left:-405px;
   padding:40px;
-  background: rgba(255, 255, 255, 0.5) url(../img/studentlife-screen3.png) 440px 40px no-repeat;
-  background: url(../img/light_wool.png) repeat;
+  background: rgba(255, 255, 255, 0.5) url(<%= asset_path 'studentlife-screen3.png' %>) 440px 40px no-repeat;
+  background: url(<%= asset_path 'light_wool.png' %>) repeat;
   height:250px;
   width:730px;
   border-radius:0 0 10px 10px;
@@ -583,7 +579,7 @@ body {
   margin-top:0;
 }
 #step4 .option_position {
-  background:url(../img/studentlife-screen4.png) left center no-repeat;
+  background:url(<%= asset_path 'studentlife-screen4.png' %>) left center no-repeat;
   margin-left:30px;
   padding-left:160px;
   margin-top:30px;
@@ -601,7 +597,7 @@ body {
   position: fixed;
   top:40%;
   left:50%;
-  background:url(../img/studentlife-screen7.png) -20px center no-repeat;
+  background:url(<%= asset_path 'studentlife-screen7.png' %>) -20px center no-repeat;
   width:967px;
   height:311px;
   margin-left:-503px;
@@ -609,7 +605,7 @@ body {
 }
 .button {
   display: block;
-  background:url(../img/button.png) no-repeat;
+  background:url(<%= asset_path 'button.png' %>) no-repeat;
   width:171px;
   height:51px;
   padding-left:10px;
@@ -627,7 +623,7 @@ body {
   color:white !important;
 }
 .button:hover {
-  background:url(../img/button-hover.png) no-repeat;
+  background:url(<%= asset_path 'button-hover.png' %>) no-repeat;
 }
 #footer {
   position:fixed;
@@ -657,7 +653,7 @@ body {
 }
 #footer #reset {
   padding-left: 25px;
-  background: rgba(34, 34, 34, 0.7) url(../img/icon-reload.png) 5px center no-repeat;
+  background: rgba(34, 34, 34, 0.7) url(<%= asset_path 'icon-reload.png' %>) 5px center no-repeat;
   float:left;
 }
 #footer .clickable:hover{
@@ -667,7 +663,7 @@ body {
   margin-left:400px;
 }
 #step5 .option_position {
-  background:rgba(255, 255, 255, 0.5) url(../img/studentlife-screen5.png) left center no-repeat;
+  background:rgba(255, 255, 255, 0.5) url(<%= asset_path 'studentlife-screen5.png' %>) left center no-repeat;
   background-size:180px;
   padding:20px;
   padding-left:180px;
@@ -690,12 +686,12 @@ label {
 }
 #magazine {
   position: absolute;
-  background:url(../img/magazine.png) center center no-repeat;
+  background:url(<%= asset_path 'magazine.png' %>) center center no-repeat;
   width:375px;
   height:245px;
 }
 #kennedy .option_position {
-  background:url(../img/sailing.png) left center no-repeat;
+  background:url(<%= asset_path 'sailing.png' %>) left center no-repeat;
   min-height:250px;
   padding-left:200px;
 }
@@ -712,10 +708,10 @@ label {
 }
 .label_check,
 .label_radio { padding-left: 30px; }
-.label_radio { background: url(../img/radio-off.png) left 5px no-repeat; }
-.label_check { background: url(../img/check-off.png) left 5px no-repeat; }
-label.c_on { background: url(../img/check-on.png) left 5px no-repeat; }
-label.r_on { background: url(../img/radio-on.png) left 5px no-repeat; }
+.label_radio { background: url(<%= asset_path 'radio-off.png' %>) left 5px no-repeat; }
+.label_check { background: url(<%= asset_path 'check-off.png' %>) left 5px no-repeat; }
+label.c_on { background: url(<%= asset_path 'check-on.png' %>) left 5px no-repeat; }
+label.r_on { background: url(<%= asset_path 'radio-on.png' %>) left 5px no-repeat; }
 .label_check input,
 .label_radio input { position: absolute; left: -9999px; }
 #step5 table {
@@ -795,7 +791,7 @@ td.first {
   padding-right:20px;
 }
 #step8 #bg {
-  background:url(../img/studentlife-screen8.png) center bottom no-repeat;
+  background:url(<%= asset_path 'studentlife-screen8.png' %>) center bottom no-repeat;
   width:708px;
   height:255px;
 }
@@ -894,7 +890,7 @@ td.first {
   }
   #step1 .question {
     display: block;
-    background: url(../img/light_wool.png) repeat;
+    background: url(<%= asset_path 'light_wool.png' %>) repeat;
     border-top:5px #fe57a1 solid;
     margin:10px;
     border-radius:0 0 5px 5px;
@@ -921,7 +917,7 @@ td.first {
   }
   #step1 .img, #step8 .img {
     position:static;
-    background:url(../img/rocket.png) top center no-repeat;
+    background:url(<%= asset_path 'rocket.png' %>) top center no-repeat;
     background-size:90%;
     display: block;
     left:-20px;
@@ -931,7 +927,7 @@ td.first {
   }
   #step1 #start, #step2 .next, #step3 .next, #step4 .next, #step5 .next, #step6 .next, #step8 .next, #kennedy .next {
     padding:5px;
-    background:#ff5c5c url(../img/right.png) center right no-repeat;
+    background:#ff5c5c url(<%= asset_path 'right.png' %>) center right no-repeat;
     border-radius:5px;
     display: block;
     height:auto;
@@ -952,10 +948,10 @@ td.first {
     top:auto;
   }
   #step1 #start:hover, .next:hover {
-    background:#fc5173 url(../img/right.png) center right no-repeat !important;
+    background:#fc5173 url(<%= asset_path 'right.png' %>) center right no-repeat !important;
   }
   #step2 .inputbox {
-    background: url(../img/light_wool.png) repeat;
+    background: url(<%= asset_path 'light_wool.png' %>) repeat;
     border-top:5px #21c6f4 solid;
     border-radius:0 0 5px 5px;
   }
@@ -964,7 +960,7 @@ td.first {
   }
   #step3 .option_position, #step4 .option_position, #step5 .option_position, #step6 .option_position, #step8 .option_position, #kennedy .option_position {
     margin:10px;
-    background: url(../img/light_wool.png) repeat;
+    background: url(<%= asset_path 'light_wool.png' %>) repeat;
     padding:10px;
     border-radius:0 0 5px 5px;
   }
@@ -1043,7 +1039,7 @@ td.first {
     position:static;
     width:100%;
     height:290px;
-    background: url(../img/whales.png) top center no-repeat;
+    background: url(<%= asset_path 'whales.png' %>) top center no-repeat;
     margin:0;
   }
   #step7 .question {
