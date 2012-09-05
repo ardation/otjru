@@ -427,7 +427,6 @@ td { vertical-align: top; }
   left:48%;
   margin-top:-227px;
   margin-left:-810px;
-  background:url(<%= asset_path 'studentlife-screen1.png' %>) center center no-repeat;
   height:554px;
   width:1536px;
 }
@@ -560,7 +559,8 @@ td { vertical-align: top; }
   margin-top:50px;
 }
 #step4 .next {
-  margin-top:80px;
+  position:relative;
+  bottom:-10px;
 }
 #step5 .next {
   margin-top:70px;
@@ -582,7 +582,6 @@ td { vertical-align: top; }
   background:url(<%= asset_path 'studentlife-screen4.png' %>) left center no-repeat;
   margin-left:30px;
   padding-left:160px;
-  margin-top:30px;
 }
 #step4 .question {
   padding-bottom:10px;
@@ -821,6 +820,9 @@ td.first {
 }
 .header {
   padding-top:10px;
+}
+#lname {
+  max-width: 150px;
 }
 @media screen and (max-width:480px) {
   #lower-foreground {

@@ -1,5 +1,5 @@
 define(
-	[ "async!http://maps.google.com/maps/api/js?libraries=places&sensor=true!callback" ],
+	[ "async!http://maps.google.com/maps/api/js?libraries=places&sensor=true&language="+I18n.locale+"!callback" ],
 	function() {
 		return {
 			map: false,
@@ -48,6 +48,6 @@ define(
 				marker.setVisible(false);
 				this.goHome();
 			}
-		} 
+		}
 	}
 );
