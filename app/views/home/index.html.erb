@@ -18,7 +18,9 @@
 		I18n.step6_error_lname = "<%=t :step6_error_lname %>";
 		I18n.step6_error_gender = "<%=t :step6_error_gender %>";
 		I18n.step6_error_mobile = "<%=t :step6_error_mobile %>";
-		I18n.step6_error_study = "<%=t :step6_error_study %>";
+    I18n.step6_error_email = "<%=t :step6_error_email %>";
+    I18n.step6_error_university = "<%=t :step6_error_university %>";
+    I18n.step6_error_faculty = "<%=t :step6_error_faculty %>";
 		I18n.step6_error_year = "<%=t :step6_error_year %>";
 	</script>
 	<%= stylesheet_link_tag "style" %>
@@ -41,6 +43,7 @@
 <div id="lower-foreground">
   <div id="footer">
     <a href="step1" id="reset" class="clickable"><%=t :reset %></a>
+    <a href="/<%=t :switch_tag %>" id="language" class="clickable" data-bypass><%=t :switch %></a>
   </div>
 </div>
 </div>

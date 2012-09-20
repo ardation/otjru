@@ -2,7 +2,7 @@ require([
   "namespace",
   // Libs
   "jquery",
-  "use!backbone", 
+  "use!backbone",
   // Modules
   "index",
   "google",
@@ -15,7 +15,7 @@ function(namespace, $, Backbone, Index, google) {
 
   if (!$.support.transition || $.browser.msie || (navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)))
     $.fn.transition = $.fn.animate;
-  
+
   // Defining the application router, you can attach sub routers here.
   var Router = Backbone.Router.extend({
     routes: {
@@ -100,7 +100,7 @@ function(namespace, $, Backbone, Index, google) {
 
       // Attach the tutorial to the DOM
       index.render(function(el) {
-        route.stepTransition(el , "#step2", function() { 
+        route.stepTransition(el , "#step2", function() {
           if (screen.height < 768) {
               $('#lower-foreground').transition({opacity: 0});
           }
@@ -185,10 +185,6 @@ function(namespace, $, Backbone, Index, google) {
             $('#errorkind').text('Mobile number already in use');
             $('#step6 .error').fadeIn();
           }
-          $.get('app/templates/hall/' + Backbone.Page.campus + '.html',
-            function(data) {
-              $('#hall_placement').html(data);
-            });
           index.populate();
         });
       });
@@ -230,7 +226,7 @@ function(namespace, $, Backbone, Index, google) {
       });
     }
   });
-  
+
 
   var fragment = document.location.pathname + document.location.hash;
   fragment = fragment.replace('/','').replace('#','');
@@ -254,7 +250,7 @@ function(namespace, $, Backbone, Index, google) {
   // Inside this function, kick-off all initialization, everything up to this
   // point should be definitions.
   $(function() {
-    
+
     // Define your master router on the application namespace and trigger all
     // navigation from this instance.
     app.router = new Router();

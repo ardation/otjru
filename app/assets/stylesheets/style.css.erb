@@ -432,8 +432,8 @@ td { vertical-align: top; }
 }
 #step1 #start {
   position: absolute;
-  right:255px;
-  top:228px;
+  right: 267px;
+  top: 225px;
 }
 #step1 .question {
   display:none;
@@ -572,7 +572,7 @@ td { vertical-align: top; }
   margin-top:70px;
 }
 #step8 .next {
-  margin-top:305px;
+  margin-top:40px;
 }
 #data .next {
   margin-right:0;
@@ -596,7 +596,6 @@ td { vertical-align: top; }
   position: fixed;
   top:40%;
   left:50%;
-  background:url(<%= asset_path 'studentlife-screen7.png' %>) -20px center no-repeat;
   width:967px;
   height:311px;
   margin-left:-503px;
@@ -785,14 +784,20 @@ td.first {
   width:44px;
 }
 #step7 .question {
-  text-align:right;
-  margin-top:60px;
-  padding-right:20px;
+  text-align: center;
+  padding:20px;
+  margin:0 auto;
+  background: url(<%= asset_path 'black_transparent.png' %>) repeat;
+  max-width:300px;
+  border-radius:5px;
 }
 #step8 #bg {
-  background:url(<%= asset_path 'studentlife-screen8.png' %>) center bottom no-repeat;
+  background:url(<%= asset_path 'studentlife-screen8.png' %>) center top no-repeat;
   width:708px;
-  height:255px;
+  height:200px;
+}
+#step8 .question {
+  text-align: center;
 }
 #data {
   padding:20px;
@@ -1041,11 +1046,9 @@ td.first {
     position:static;
     width:100%;
     height:290px;
-    background: url(<%= asset_path 'whales.png' %>) top center no-repeat;
     margin:0;
   }
   #step7 .question {
-    padding-top:200px;
     text-align:center;
   }
 }
@@ -1065,5 +1068,16 @@ td.first {
   #step3, #step4, #step5, #step6, #step7, #step8, #kennedy {
     top:50px;
     margin-top:0;
+  }
+}
+
+@media screen and (max-height:620px) {
+  #lower-foreground {
+    background:none;
+    height:auto;
+  }
+  #step3, #step4, #step5, #step6, #step7, #step8, #kennedy {
+    top: 20px;
+    margin-top: 0;
   }
 }

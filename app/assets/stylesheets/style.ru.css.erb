@@ -1,6 +1,10 @@
 #step1 {
   background:url(<%= asset_path 'studentlife-screen1_ru.png' %>) center center no-repeat;
 }
+#step1 #start {
+  right: 264px;
+  top: 228px;
+}
 .button {
 	line-height: 58px;
 	font-size: 30px;
@@ -11,10 +15,29 @@
 #step3 .question {
 	font-size: 24px;
 }
+#step3 .next {
+margin-top: 65px;
+}
+#step4 .next {
+margin-top: 55px;
+}
+#step5 .next {
+margin-top: 65px;
+}
+#kennedy .next {
+margin-top: 55px;
+}
 #step6 .next {
 margin-top: 95px;
 }
 @media screen and (max-width:800px) {
-	#step6 .next {
+	#step3 .next, #step4 .next, #step5 .next,  #kennedy .next, #step6 .next {
 		margin-top: 0px;
 	}
+  .next {
+    line-height: 30px;
+  }
+  #step1 {
+    background:none;
+  }
+}

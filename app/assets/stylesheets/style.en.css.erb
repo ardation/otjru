@@ -1,3 +1,20 @@
 #step1 {
   background:url(<%= asset_path 'studentlife-screen1_en.png' %>) center center no-repeat;
 }
+.question {
+  color:#f00;
+}
+#step4 .next {
+  margin-top: 60px;
+}
+#step6 .next {
+  margin-top: 95px;
+}
+@media screen and (max-width:800px) {
+  #step1 {
+    background:none;
+  }
+  #step4 .next, #step6 .next {
+    margin-top: 0;
+  }
+}

@@ -23,12 +23,14 @@ function(namespace, Backbone) {
       fname: '',
       lname: '',
       gender: '',
-      major: '',
+      faculty: '',
+      university: '',
+      email: '',
       year: '',
       mobile: '',
       kennedy: '',
       interest: '',
-      outreach: '2012B',
+      outreach: 'RUSSIA',
       mobileer: false
     },
     write: function () {
@@ -119,7 +121,7 @@ function(namespace, Backbone) {
 
     render: function(done) {
       var view = this;
-      
+
       // Fetch the template, render it to the View element and call done.
       namespace.fetchTemplate(this.template, function(tmpl) {
         view.el.innerHTML = tmpl();
@@ -145,7 +147,7 @@ function(namespace, Backbone) {
     },
     render: function(done) {
       var view = this;
-      
+
       // Fetch the template, render it to the View element and call done.
       namespace.fetchTemplate(this.template, function(tmpl) {
         view.el.innerHTML = tmpl();
@@ -190,12 +192,12 @@ function(namespace, Backbone) {
     },
     labelstyle: function() {
       if ($('.label_check input').length) {
-          $('.label_check').each(function(){ 
+          $('.label_check').each(function(){
               $(this).removeClass('c_on');
           });
-          $('.label_check input:checked').each(function(){ 
+          $('.label_check input:checked').each(function(){
               $(this).parent('label').addClass('c_on');
-          });                
+          });
       };
     },
     render: function(done) {
@@ -236,17 +238,17 @@ function(namespace, Backbone) {
     },
     labelstyle: function() {
       if ($('.label_radio input').length) {
-          $('.label_radio').each(function(){ 
+          $('.label_radio').each(function(){
               $(this).removeClass('r_on');
           });
-          $('.label_radio input:checked').each(function(){ 
+          $('.label_radio input:checked').each(function(){
               $(this).parent('label').addClass('r_on');
           });
       };
     },
     render: function(done) {
       var view = this;
-      
+
       // Fetch the template, render it to the View element and call done.
       namespace.fetchTemplate(this.template, function(tmpl) {
         view.el.innerHTML = tmpl();
@@ -285,17 +287,17 @@ function(namespace, Backbone) {
     },
     labelstyle: function() {
       if ($('.label_radio input').length) {
-          $('.label_radio').each(function(){ 
+          $('.label_radio').each(function(){
               $(this).removeClass('r_on');
           });
-          $('.label_radio input:checked').each(function(){ 
+          $('.label_radio input:checked').each(function(){
               $(this).parent('label').addClass('r_on');
           });
       };
     },
     render: function(done) {
       var view = this;
-      
+
       // Fetch the template, render it to the View element and call done.
       namespace.fetchTemplate(this.template, function(tmpl) {
         view.el.innerHTML = tmpl();
@@ -346,10 +348,10 @@ function(namespace, Backbone) {
     },
     labelstyle: function() {
       if ($('.label_radio input').length) {
-          $('.label_radio').each(function(){ 
+          $('.label_radio').each(function(){
               $(this).removeClass('r_on');
           });
-          $('.label_radio input:checked').each(function(){ 
+          $('.label_radio input:checked').each(function(){
               $(this).parent('label').addClass('r_on');
           });
       };
@@ -368,7 +370,8 @@ function(namespace, Backbone) {
       });
     },
     next: function(event) {
-      var phone = /^02\d{7,13}$/
+      var phone = /^\d{5,15}$/
+      var email = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/
 
       if( $('#fname').val() == '' ) {
         $('#errorkind').text(I18n.step6_error_fname);
@@ -379,11 +382,17 @@ function(namespace, Backbone) {
       } else if( !$('[name=gender]').is(':checked') ) {
         $('#errorkind').text(I18n.step6_error_gender);
         $('#step6 .error').fadeIn();
-      } else if( $('#mobile').val() == '' ||  !phone.test($('#mobile').val()) ) {
+      } else if( !phone.test($('#mobile').val()) ) {
         $('#errorkind').text(I18n.step6_error_mobile);
         $('#step6 .error').fadeIn();
-      } else if( $('#major').val() == 'Area of Study' ) {
-        $('#errorkind').text(I18n.step6_error_study);
+      } else if( !email.test($('#email').val()) ) {
+        $('#errorkind').text(I18n.step6_error_email);
+        $('#step6 .error').fadeIn();
+      } else if( $('#university').val() == '' ) {
+        $('#errorkind').text(I18n.step6_error_university);
+        $('#step6 .error').fadeIn();
+      } else if( $('#faculty').val() == '' ) {
+        $('#errorkind').text(I18n.step6_error_faculty);
         $('#step6 .error').fadeIn();
       } else if( !$('[name=year]').is(':checked') ) {
         $('#errorkind').text(I18n.step6_error_year);
@@ -396,6 +405,9 @@ function(namespace, Backbone) {
       $('#fname').val( Backbone.PageData.get('fname') );
       $('#lname').val( Backbone.PageData.get('lname') );
       $('#mobile').val( Backbone.PageData.get('mobile') );
+      $('#email').val( Backbone.PageData.get('email') );
+      $('#university').val( Backbone.PageData.get('university') );
+      $('#faculty').val( Backbone.PageData.get('faculty') );
       var gender = Backbone.PageData.get('gender');
       if (gender != '') {
         $('#' + gender).prop('checked',true);
@@ -414,7 +426,7 @@ function(namespace, Backbone) {
     template: I18n.locale + "/page/step7",
     render: function(done) {
       var view = this;
-      
+
       // Validation
       if ( Backbone.PageData.get('place') == '' ) {
         setTimeout(function() {
@@ -447,7 +459,9 @@ function(namespace, Backbone) {
       if ( Backbone.PageData.get('fname') == '' ||
         Backbone.PageData.get('lname') == '' ||
         Backbone.PageData.get('gender') == '' ||
-        Backbone.PageData.get('major') == '' ||
+        Backbone.PageData.get('email') == '' ||
+        Backbone.PageData.get('univesity') == '' ||
+        Backbone.PageData.get('faculty') == '' ||
         Backbone.PageData.get('mobile') == '' ||
         Backbone.PageData.get('year') == ''
       ) {
@@ -523,7 +537,7 @@ function(namespace, Backbone) {
     },
     render: function(done) {
       var view = this;
-      
+
       // Fetch the template, render it to the View element and call done.
       namespace.fetchTemplate(this.template, function(tmpl) {
         view.el.innerHTML = tmpl();
@@ -552,17 +566,17 @@ function(namespace, Backbone) {
     },
     labelstyle: function() {
       if ($('.label_radio input').length) {
-          $('.label_radio').each(function(){ 
+          $('.label_radio').each(function(){
               $(this).removeClass('r_on');
           });
-          $('.label_radio input:checked').each(function(){ 
+          $('.label_radio input:checked').each(function(){
               $(this).parent('label').addClass('r_on');
           });
       };
     },
     render: function(done) {
       var view = this;
-      
+
       // Fetch the template, render it to the View element and call done.
       namespace.fetchTemplate(this.template, function(tmpl) {
         view.el.innerHTML = tmpl();
@@ -615,7 +629,7 @@ function(namespace, Backbone) {
 
       else if($(e.currentTarget).attr('type') == 'radio')
         Backbone.PageData.set($(e.currentTarget).attr('name'), $(e.currentTarget).val());
-      
+
       else
         Backbone.PageData.set($(e.currentTarget).attr('id'), $(e.currentTarget).val() );
 
@@ -623,25 +637,25 @@ function(namespace, Backbone) {
     },
     labelstyle: function() {
        if ($('.label_check input').length) {
-          $('.label_check').each(function(){ 
+          $('.label_check').each(function(){
               $(this).removeClass('c_on');
           });
-          $('.label_check input:checked').each(function(){ 
+          $('.label_check input:checked').each(function(){
               $(this).parent('label').addClass('c_on');
-          });                
+          });
       };
       if ($('.label_radio input').length) {
-          $('.label_radio').each(function(){ 
+          $('.label_radio').each(function(){
               $(this).removeClass('r_on');
           });
-          $('.label_radio input:checked').each(function(){ 
+          $('.label_radio input:checked').each(function(){
               $(this).parent('label').addClass('r_on');
           });
       };
     },
     render: function(done) {
       var view = this;
-      
+
       // Fetch the template, render it to the View element and call done.
       namespace.fetchTemplate(this.template, function(tmpl) {
         view.el.innerHTML = tmpl();
@@ -663,7 +677,7 @@ function(namespace, Backbone) {
 
       else if( !$('[name=interest]').is(':checked') )
         $('#data .error').text('Make a selection to Beginning Journey').fadeIn();
-      
+
       else if( $('#fname').val() == '' )
         $('#data .error').text(I18n.step6_error_fname).fadeIn();
 
@@ -675,13 +689,10 @@ function(namespace, Backbone) {
       else if( $('#mobile').val() == '' ||  !phone.test($('#mobile').val()) )
         $('#data .error').text(I18n.step6_error_mobile).fadeIn();
 
-      else if( $('#major').val() == 'Area of Study' )
-        $('#data .error').text(I18n.step6_error_study).fadeIn();
-
       else if( !$('[name=year]').is(':checked') )
         $('#data .error').text(I18n.step6_error_year).fadeIn();
-      
-      
+
+
       else {
         namespace.app.router.navigate('step7', {trigger: true});
       }
@@ -707,6 +718,9 @@ function(namespace, Backbone) {
       $('#fname').val( Backbone.PageData.get('fname') );
       $('#lname').val( Backbone.PageData.get('lname') );
       $('#mobile').val( Backbone.PageData.get('mobile') );
+      $('#email').val( Backbone.PageData.get('email') );
+      $('#university').val( Backbone.PageData.get('university') );
+      $('#faculty').val( Backbone.PageData.get('faculty') );
       var gender = Backbone.PageData.get('gender');
       if (gender != '') {
         $('#' + gender).prop('checked',true);
