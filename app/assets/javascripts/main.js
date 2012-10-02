@@ -147,13 +147,6 @@ function(namespace, $, Backbone, Index, google) {
       var index = new Index.Views.step3;
       index.render(function(el) {
         route.stepTransition(el , "#step3", function() {
-          $('#magazine').peelback({
-            clickURL: 'step3',
-            adImage: '/assets/foldable.gif',
-            peelImage: '/assets/peel-image.png',
-            autoAnimate: true,
-            bigSize: 200
-          });
           index.populate();
         });
       });
