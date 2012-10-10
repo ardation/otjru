@@ -1,8 +1,8 @@
 class DataController < ApplicationController
   def index
-    api = MissionHub::API.new
+    api = Missionhub::API.new
     api.auth
-    person = MissionHub::Person.new
+    person = Missionhub::Person.new
     begin
       person.first_name = params[:fname]
       person.last_name = params[:lname]

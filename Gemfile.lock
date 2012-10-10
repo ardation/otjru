@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    MissionHub (1.0rc9)
+    Missionhub (1.0.2)
       httparty (~> 0.9.0)
     actionmailer (3.2.3)
       actionpack (= 3.2.3)
@@ -115,7 +115,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  MissionHub
+  Missionhub
   coffee-rails (~> 3.2.1)
   jquery-rails
   json
