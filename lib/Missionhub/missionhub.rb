@@ -1,6 +1,6 @@
-Dir[File.dirname(__FILE__) + '*.rb'].each do |file|
-  require file
-end
+require Address
+require API
+require Person
 
 module Missionhub
   extend self
