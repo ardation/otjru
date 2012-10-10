@@ -1068,12 +1068,15 @@ td.first {
   #step3, #step4, #step5, #step6, #step7, #step8, #kennedy {
     top:50px;
     margin-top:0;
+    transition: top 0.5s;
+    -moz-transition: top 0.5s; /* Firefox 4 */
+    -webkit-transition: top 0.5s; /* Safari and Chrome */
+    -o-transition: top 0.5s; /* Opera */
   }
 }
 
 @media screen and (max-height:620px) {
   #lower-foreground {
-    background:none;
     height:auto;
   }
   #step3, #step4, #step5, #step6, #step7, #step8, #kennedy {

@@ -210,11 +210,7 @@ function(namespace, $, Backbone, Index, google) {
       var index = new Index.Views.data;
       index.render(function(el) {
         route.stepTransition(el , "#data", function() {
-          $.get('app/templates/hall/' + Backbone.Page.campus + '.html',
-            function(data) {
-              $('#hall_placement').html(data);
-              index.populate();
-            });
+          index.populate();
         });
       });
     }
@@ -232,7 +228,7 @@ function(namespace, $, Backbone, Index, google) {
 
   window.onerror = function(errorMsg, file, lineNumber) {
     // post the error with all the information we need.
-    $.post('http://s1.studentlife.org.nz/js_error.php', {error: errorMsg, file: file, lineNumber: lineNumber, documentReady: window.documentIsReady});
+    /*$.post('http://s1.studentlife.org.nz/js_error.php', {error: errorMsg, file: file, lineNumber: lineNumber, documentReady: window.documentIsReady});*/
     return false;
   }
 

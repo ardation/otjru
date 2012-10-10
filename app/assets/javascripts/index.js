@@ -18,8 +18,8 @@ function(namespace, Backbone) {
     defaults: {
       campus: '',
       place: '',
-      magazine: ['studying'],
-      journey: '',
+      magazine: [],
+      journey: [],
       fname: '',
       lname: '',
       gender: '',
@@ -31,7 +31,7 @@ function(namespace, Backbone) {
       kennedy: '',
       interest: '',
       outreach: 'RUSSIA',
-      mobileer: false
+      mobileer: false,
     },
     write: function () {
       amplify.store('pagedata', this);
@@ -50,8 +50,7 @@ function(namespace, Backbone) {
         return false;
       }
     },
-    initialize: function(campus, hash) {
-      this.campus = campus;
+    initialize: function(hash) {
       this.checkpage(hash);
       this.pagedata();
     },
@@ -76,7 +75,7 @@ function(namespace, Backbone) {
     },
     checkpage: function(page) {
       if ( amplify.store('currentpage') != undefined ) {
-        if( amplify.store('currentpage') != page.replace(I18n.locale  + '/','') ) {
+        if( amplify.store('currentpage') != page.split('/')[2] ) {
           //saved page does not match
           window.location = '/'+ I18n.locale +'/' + amplify.store('currentpage');
         }
@@ -103,7 +102,7 @@ function(namespace, Backbone) {
       var records = amplify.store('records');
       _.each(records, function(value) {
         amplify.store('records', _.without(records, value));
-        /*$.post('http://s1.studentlife.org.nz/index.php/api/journey/user/format/json', value , 'json')
+        $.post('/data.json', value , 'json')
         .success(function() {
           amplify.store('records', _.without(records, value));
         })
@@ -111,7 +110,7 @@ function(namespace, Backbone) {
           if(data.responseText == '"Phone Number already exists in the system."') {
             amplify.store('records', _.without(records, value));
           }
-        });*/
+        });
       });
     }
   });
@@ -183,9 +182,9 @@ function(namespace, Backbone) {
       'click input': 'store'
     },
     store: function() {
-      var magazine = [];
-      $('#studying:checked, #relation:checked, #lifesqs:checked:checked, #sports:checked').each(function() {
-        magazine.push( $(this).attr('id') );
+      var magazine = ["","","",""]
+      $('#m1:checked, #m2:checked, #m3:checked, #m4:checked').each(function() {
+        magazine[$(this).attr('name')] = $(this).val();
       });
       Backbone.PageData.set('magazine', magazine);
       Backbone.PageData.write();
@@ -229,20 +228,24 @@ function(namespace, Backbone) {
     template: I18n.locale + "/page/step4",
     events: {
       'click .next': 'next',
-      "click .label_radio": "labelstyle",
+      'click .label_check': 'labelstyle',
       'change input': 'store'
     },
     store: function(e) {
-        Backbone.PageData.set('journey', $(e.currentTarget).attr('id'));
+       var journey = ["","","","",""];
+        $('#c1:checked, #c2:checked, #c3:checked, #c4:checked, #c5:checked').each(function() {
+          journey[$(this).attr('name')] = $(this).val();
+        });
+        Backbone.PageData.set('journey', journey);
         Backbone.PageData.write();
     },
     labelstyle: function() {
-      if ($('.label_radio input').length) {
-          $('.label_radio').each(function(){
-              $(this).removeClass('r_on');
+      if ($('.label_check input').length) {
+          $('.label_check').each(function(){
+              $(this).removeClass('c_on');
           });
-          $('.label_radio input:checked').each(function(){
-              $(this).parent('label').addClass('r_on');
+          $('.label_check input:checked').each(function(){
+              $(this).parent('label').addClass('c_on');
           });
       };
     },
@@ -260,17 +263,14 @@ function(namespace, Backbone) {
       });
     },
     next: function(event) {
-      if( !$('[name=sj]').is(':checked') )
-        $('#step4 .error').fadeIn();
-      else
-        namespace.app.router.navigate('step5', {trigger: true});
+      namespace.app.router.navigate('step5', {trigger: true});
     },
     populate: function() {
       var journey = Backbone.PageData.get('journey');
-      if (journey != '') {
-        $('#' + journey).prop('checked',true);
-        this.labelstyle();
-      }
+      $.each(journey, function(index, value) {
+        $('#' + value).prop('checked',true);
+      });
+      this.labelstyle();
     }
   });
 
@@ -435,13 +435,6 @@ function(namespace, Backbone) {
         return;
       }
 
-      if ( Backbone.PageData.get('journey') == '' ) {
-        setTimeout(function() {
-          namespace.app.router.navigate('step4', {trigger: true});
-        }, 500);
-        return;
-      }
-
       if ( Backbone.PageData.get('interest') == '' ) {
         setTimeout(function() {
           namespace.app.router.navigate('step5', {trigger: true});
@@ -475,23 +468,12 @@ function(namespace, Backbone) {
 
       // Data Massaging
       if ( data.gender == 'f' )
-        data.gender = 'Female';
+        data.gender = 'female';
       else
-        data.gender = 'Male';
+        data.gender = 'male';
 
       if ( data.interest == 'iaac' )
-        data.interest = 'Already Christian';
-
-      if ( data.kennedy == 'k1' )
-        data.kennedy = '0%';
-      else if ( data.kennedy == 'k2' )
-        data.kennedy = '25%';
-      else if ( data.kennedy == 'k3' )
-        data.kennedy = '50%';
-      else if ( data.kennedy == 'k4' )
-        data.kennedy = '75%';
-      else if ( data.kennedy == 'k5' )
-        data.kennedy = '100%';
+        data.interest = 'Уже христианин';
 
       if ( data.interest == 'i1' )
         data.interest = '1';
@@ -599,139 +581,6 @@ function(namespace, Backbone) {
         $('#' + kennedy).prop('checked',true);
         this.labelstyle();
       }
-    }
-  });
-
-  index.Views.data = Backbone.View.extend({
-    template: I18n.locale + "/page/data",
-    events: {
-      'click .next': 'next',
-      "click .label_radio, .label_check": "labelstyle",
-      'change input, select': 'store'
-    },
-    store: function(e) {
-      if (e.currentTarget.id == 'locality')
-        Backbone.PageData.set('place', $(e.currentTarget).val());
-
-      else if (e.currentTarget.type == 'checkbox') {
-        var magazine = [];
-        $('#studying:checked, #relation:checked, #lifesqs:checked, #sports:checked').each(function() {
-          magazine.push( $(this).attr('id') );
-        });
-        Backbone.PageData.set('magazine', magazine );
-      }
-
-      else if (e.currentTarget.name == 'sj')
-        Backbone.PageData.set('journey', $(e.currentTarget).attr('id'));
-
-      else if (e.currentTarget.name == 'interest')
-        Backbone.PageData.set('interest', $(e.currentTarget).attr('id'));
-
-      else if($(e.currentTarget).attr('type') == 'radio')
-        Backbone.PageData.set($(e.currentTarget).attr('name'), $(e.currentTarget).val());
-
-      else
-        Backbone.PageData.set($(e.currentTarget).attr('id'), $(e.currentTarget).val() );
-
-      Backbone.PageData.write();
-    },
-    labelstyle: function() {
-       if ($('.label_check input').length) {
-          $('.label_check').each(function(){
-              $(this).removeClass('c_on');
-          });
-          $('.label_check input:checked').each(function(){
-              $(this).parent('label').addClass('c_on');
-          });
-      };
-      if ($('.label_radio input').length) {
-          $('.label_radio').each(function(){
-              $(this).removeClass('r_on');
-          });
-          $('.label_radio input:checked').each(function(){
-              $(this).parent('label').addClass('r_on');
-          });
-      };
-    },
-    render: function(done) {
-      var view = this;
-
-      // Fetch the template, render it to the View element and call done.
-      namespace.fetchTemplate(this.template, function(tmpl) {
-        view.el.innerHTML = tmpl();
-
-        // If a done function is passed, call it with the element
-        if (_.isFunction(done)) {
-          done(view.el);
-        }
-      });
-    },
-    next: function(event) {
-      var phone = /^\d{6,14}$/
-
-      if( !$('#locality').val() )
-        $('#data .error').text('Enter a location').fadeIn();
-
-      else if( !$('[name=sj]').is(':checked') )
-        $('#data .error').text('Make a selection about Spiritual Journey').fadeIn();
-
-      else if( !$('[name=interest]').is(':checked') )
-        $('#data .error').text('Make a selection to Beginning Journey').fadeIn();
-
-      else if( $('#fname').val() == '' )
-        $('#data .error').text(I18n.step6_error_fname).fadeIn();
-
-      else if( $('#lname').val() == '' )
-        $('#data .error').text(I18n.step6_error_lname).fadeIn();
-
-      else if( !$('[name=gender]').is(':checked') )
-        $('#data .error').text(I18n.step6_error_gender).fadeIn();
-      else if( $('#mobile').val() == '' ||  !phone.test($('#mobile').val()) )
-        $('#data .error').text(I18n.step6_error_mobile).fadeIn();
-
-      else if( !$('[name=year]').is(':checked') )
-        $('#data .error').text(I18n.step6_error_year).fadeIn();
-
-
-      else {
-        namespace.app.router.navigate('step7', {trigger: true});
-      }
-    },
-    populate: function() {
-      $('#locality').val( Backbone.PageData.get('place') );
-
-      var magazine = Backbone.PageData.get('magazine');
-      $.each(magazine, function(index, value) {
-        $('#' + value).prop('checked',true);
-      });
-
-      var journey = Backbone.PageData.get('journey');
-      if (journey != '') {
-        $('#' + journey).prop('checked',true);
-      }
-
-      var interest = Backbone.PageData.get('interest');
-      if (interest != '') {
-        $('#' + interest).prop('checked',true);
-      }
-
-      $('#fname').val( Backbone.PageData.get('fname') );
-      $('#lname').val( Backbone.PageData.get('lname') );
-      $('#mobile').val( Backbone.PageData.get('mobile') );
-      $('#email').val( Backbone.PageData.get('email') );
-      $('#university').val( Backbone.PageData.get('university') );
-      $('#faculty').val( Backbone.PageData.get('faculty') );
-      var gender = Backbone.PageData.get('gender');
-      if (gender != '') {
-        $('#' + gender).prop('checked',true);
-      }
-
-      var year = Backbone.PageData.get('year');
-      if (year != '') {
-        $('#y' + year).prop('checked',true);
-      }
-
-      this.labelstyle();
     }
   });
 
