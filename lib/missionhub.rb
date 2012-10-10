@@ -5,14 +5,16 @@ require_relative 'missionhub/person.rb'
 module Missionhub
   extend self
 
-  attr_accessor :client_id, :client_secret, :base_uri, :org_id
-
-  base_uri = 'http://www.missionhub.com/'
-  client_id = 6
-  client_secret = '05fbcedcf2b2ea3958b359b51796b14b1c04c19a'
-  org_id = 6775
-
-  def config(&block)
-    instance_eval(&block)
+  def base_uri
+    'http://www.missionhub.com/'
+  end
+  def client_id
+    6
+  end
+  def client_secret
+    '05fbcedcf2b2ea3958b359b51796b14b1c04c19a'
+  end
+  def org_id
+    6775
   end
 end

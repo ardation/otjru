@@ -14,7 +14,7 @@ module Missionhub
 
     def auth
       options = {:body => { :grant_type => 'none', :client_id => Missionhub.client_id, :client_secret => Missionhub.client_secret } }
-      response = self.class.post('/oauth/access_token', options)
+      response = self.class.post('http://www.missionhub.com/oauth/access_token', options)
       raise 'invalid client' if response.parsed_response['access_token'].nil?
       @access_token = response.parsed_response['access_token']
       raise 'invalid scope' if response.parsed_response['scope'].nil?
@@ -32,7 +32,7 @@ module Missionhub
       person_hash = person.hash
       person_hash.delete("answers")
       options = {:body => { :person => person_hash, :answers => person.answers, :org_id => Missionhub.org_id, :user_id => 1615180, :access_token => @access_token} }
-      response = self.class.post('/api/v2/contacts.json', options)
+      response = self.class.post('http://www.missionhub.com/api/v2/contacts.json', options)
       if !response.parsed_response['error'].nil?
         raise response.parsed_response['error']
       else
