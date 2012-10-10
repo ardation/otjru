@@ -1,6 +1,6 @@
-require Address
-require API
-require Person
+require 'Missionhub/Person/Address'
+require 'Missionhub/API'
+require 'Missionhub/Person'
 
 module Missionhub
   extend self
