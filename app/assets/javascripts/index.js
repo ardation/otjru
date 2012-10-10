@@ -50,8 +50,13 @@ function(namespace, Backbone) {
         return false;
       }
     },
-    initialize: function(hash) {
-      this.checkpage(hash);
+    initialize: function() {
+      var str = document.URL.match(/[^\/]+$/);
+      if ( str != null )
+        str = str[0];
+      else
+        str = '';
+      this.checkpage(str);
       this.pagedata();
     },
     reset: function() {

@@ -217,16 +217,10 @@ function(namespace, $, Backbone, Index, google) {
   });
 
 
-  var fragment = document.location.pathname + document.location.hash;
-  fragment = fragment.replace('/','').replace('#','');
+  //var fragment = document.location.pathname + document.location.hash;
+  //fragment = fragment.replace('/','').replace('#','');
 
-  var str = document.URL.match(/[^\/]+$/);
-  if ( str != null )
-    str = str[0];
-  else
-    str = '';
-
-  Backbone.Page = new Index.Page(str, fragment);
+  Backbone.Page = new Index.Page;
   Backbone.Page.pushrecords();
 
   window.addEventListener('online',function(evt) {
