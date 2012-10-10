@@ -219,7 +219,14 @@ function(namespace, $, Backbone, Index, google) {
 
   var fragment = document.location.pathname + document.location.hash;
   fragment = fragment.replace('/','').replace('#','');
-  Backbone.Page = new Index.Page(document.URL.match(/\/\/([^\.]*)/)[1], fragment);
+
+  var str = document.URL.match(/[^\/]+$/);
+  if ( str != null )
+    str = str[0];
+  else
+    str = '';
+
+  Backbone.Page = new Index.Page(str, fragment);
   Backbone.Page.pushrecords();
 
   window.addEventListener('online',function(evt) {

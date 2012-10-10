@@ -75,7 +75,7 @@ function(namespace, Backbone) {
     },
     checkpage: function(page) {
       if ( amplify.store('currentpage') != undefined ) {
-        if( amplify.store('currentpage') != page.split('/')[2] ) {
+        if( amplify.store('currentpage') != page ) {
           //saved page does not match
           window.location = '/'+ I18n.locale +'/' + amplify.store('currentpage');
         }
