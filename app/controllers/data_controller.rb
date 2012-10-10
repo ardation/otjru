@@ -18,10 +18,9 @@ class DataController < ApplicationController
       person.set_answer(4963, params[:year])
       person.phone = params[:mobile]
       response = api.create_person(person)
-      logger.info response.request.inspect
       respond_to do |format|
         format.json{
-          render :json => response.inspect
+          render :json => 'success'
         }
       end
     rescue => ex
