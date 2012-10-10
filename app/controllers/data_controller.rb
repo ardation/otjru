@@ -1,8 +1,11 @@
 class DataController < ApplicationController
+  require 'Missionhub'
+  include MissionHub
+
   def index
-    api = Missionhub::API.new
+    api = MissionHub::API.new
     api.auth
-    person = Missionhub::Person.new
+    person = MissionHub::Person.new
     begin
       person.first_name = params[:fname]
       person.last_name = params[:lname]
