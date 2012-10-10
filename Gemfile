@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.3'
 gem 'pg'
 gem 'json'
-gem 'Missionhub'
+gem "httparty", "~> 0.9.0"
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
