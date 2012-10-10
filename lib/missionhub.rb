@@ -1,6 +1,6 @@
-require_relative 'Missionhub/Person/Address'
-require_relative 'Missionhub/API'
-require_relative 'Missionhub/Person'
+require_relative 'missionhub/person/address'
+require_relative 'missionhub/api'
+require_relative 'missionhub/person'
 
 module Missionhub
   extend self
