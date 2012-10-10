@@ -1,3 +1,5 @@
+require 'MissionHub'
+
 MissionHub.config do |c|
   c.base_uri = 'http://www.missionhub.com/'
   c.client_id = 6
