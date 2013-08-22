@@ -2,7 +2,6 @@
 require.config({
   // Initialize the application with the main application file
   deps: ["main"],
-
   paths: {
     // Libraries
     jquery: "/assets/jquery",
@@ -11,11 +10,9 @@ require.config({
     google: "/assets/google",
     ls: "/assets/backbone.localStorage-min",
     transit: "/assets/jquery.transit.min",
-    peel: "/assets/jquery.peelback",
     amplify: "/assets/backbone.amplify",
     amplifylib: "/assets/amplify.store",
     json: "/assets/json2",
-    newrelic: "/assets/jquery.newrelic",
 
     // Plugins
     async: "/assets/async",
@@ -31,12 +28,6 @@ require.config({
       deps: ["backbone"]
     },
     transit: {
-      deps: ["jquery"]
-    },
-    peel: {
-      deps: ["jquery"]
-    },
-    newrelic: {
       deps: ["jquery"]
     },
     amplify: {
