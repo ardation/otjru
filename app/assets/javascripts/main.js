@@ -6,9 +6,7 @@ require([
   // Modules
   "index",
   "google",
-  "use!transit",
-  "use!peel",
-  "use!newrelic"
+  "use!transit"
   ],
 
 function(namespace, $, Backbone, Index, google) {
