@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  content_type: 1
+  foreign_id: 1
+  name: MyString
+
+two:
+  content_type: 1
+  foreign_id: 1
+  name: MyString

@@ -9,7 +9,7 @@
 	<link rel="apple-touch-icon" href="assets/img/logo.png"/>
 	<link rel="icon" type="image/png" href="<%= asset_path 'favicon.png' %>">
 
-	<title><%=t :otj %> - <%=t :student_life %></title>
+	<title><%=t :otj %> - <%= @org_name %></title>
 
 	<script type="text/javascript">
 		var I18n = {};
@@ -43,7 +43,7 @@
 <div id="lower-foreground">
   <div id="footer">
     <a href="step1" id="reset" class="clickable"><%=t :reset %></a>
-    <a href="/<%=t :switch_tag %>" id="language" class="clickable" data-bypass><%=t :switch %></a>
+    <!--a href="/<%=t :switch_tag %>" id="language" class="clickable" data-bypass><%=t :switch %></a-->
   </div>
 </div>
 </div>

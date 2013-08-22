@@ -1,32 +1,9 @@
 class PageController < ApplicationController
   layout "page"
-  def step1
-  end
-
-  def step2
-  end
-
-  def step3
-  end
-
-  def step4
-  end
-
-  def step5
-  end
-
-  def step6
-  end
-
-  def step7
-  end
-
-  def step8
-  end
-
-  def data
-  end
-
-  def kennedy
+  def home
+    if params[:page] == "step1"
+      @outreach = Outreach.find_by_url(request.host)
+    end
+    render params[:page]
   end
 end

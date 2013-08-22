@@ -2,26 +2,24 @@
 	<div class="option_position">
 		<div class="question"><%=t :spiritual_question %></div>
 		<label class="label_check" for="c1">
-			<input name="0" type="checkbox" id="c1" value="'английских клубах' с носителями языка">
+			<input name="0" type="checkbox" id="c1" value="<%=t :spiritual_opt1 %>">
 			<%=t :spiritual_opt1 %>
 		</label>
 		<label class="label_check" for="c2">
-			<input name="1" type="checkbox" id="c2" value="семинарах 'Нравственность в бизнесе'">
+			<input name="1" type="checkbox" id="c2" value="<%=t :spiritual_opt2 %>">
 			<%=t :spiritual_opt2 %>
 		</label>
 		<label class="label_check" for="c3">
-			<input name="2" type="checkbox" id="c3" value="проектах социальной помощи">
+			<input name="2" type="checkbox" id="c3" value="<%=t :spiritual_opt3 %>">
 			<%=t :spiritual_opt3 %>
 		</label>
     <label class="label_check" for="c4">
-      <input name="3" type="checkbox" id="c4" value="обсуждениях на духовную тему">
+      <input name="3" type="checkbox" id="c4" value="<%=t :spiritual_opt4 %>">
       <%=t :spiritual_opt4 %>
     </label>
-    <label class="label_check" for="c5">
-      <input name="4" type="checkbox" id="c5" value="спортивных мероприятиях и играх">
-      <%=t :spiritual_opt5 %>
-    </label>
 	</div>
+  <br>
+  <br>
 	<div class="error"><strong><%=t :forgot %></strong> <%= t :spiritual_error %></div>
 	<a class="button next"><%=t :next %></a>
 </div>

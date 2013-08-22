@@ -30,7 +30,6 @@ function(namespace, Backbone) {
       mobile: '',
       kennedy: '',
       interest: '',
-      outreach: 'RUSSIA',
       mobileer: false,
     },
     write: function () {
@@ -86,7 +85,7 @@ function(namespace, Backbone) {
         }
       } else {
         //there is no saved page
-        amplify.store('currentpage', '');
+        amplify.store('currentpage', 'step1');
         window.location = document.location.protocol + '//' + document.location.host;
       }
     },
@@ -107,6 +106,26 @@ function(namespace, Backbone) {
       var records = amplify.store('records');
       _.each(records, function(value) {
         amplify.store('records', _.without(records, value));
+        value = {
+          person: {
+            first_name: value.fname,
+            last_name: value.lname,
+            gender: value.gender,
+            email: value.email,
+            mobile: value.mobile,
+            answers_attributes: [
+              {content_id:1, data:value.place},
+              {content_id:2, data:JSON.stringify(value.magazine)},
+              {content_id:3, data:JSON.stringify(value.journey)},
+              {content_id:4, data:value.interest},
+              {content_id:5, data:value.kennedy},
+              {content_id:6, data:value.university},
+              {content_id:7, data:value.faculty},
+              {content_id:8, data:value.year},
+              {content_id:10, data:I18n.locale}
+            ]
+          }
+        };
         $.post('/data.json', value , 'json')
         .success(function() {
           amplify.store('records', _.without(records, value));
@@ -478,7 +497,7 @@ function(namespace, Backbone) {
         data.gender = 'male';
 
       if ( data.interest == 'iaac' )
-        data.interest = 'Уже христианин';
+        data.interest = 'Already Christian';
 
       if ( data.interest == 'i1' )
         data.interest = '1';
@@ -503,7 +522,7 @@ function(namespace, Backbone) {
       //Publish
       setTimeout(function() {
         namespace.app.router.navigate('step8', {trigger: true});
-      }, 4000);
+      }, 8000);
 
       // Fetch the template, render it to the View element and call done.
       namespace.fetchTemplate(this.template, function(tmpl) {
@@ -536,7 +555,7 @@ function(namespace, Backbone) {
       });
     },
     next: function(event) {
-      namespace.app.router.navigate('', {trigger: true});
+      namespace.app.router.navigate('step1', {trigger: true});
     }
   });
 

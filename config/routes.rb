@@ -1,23 +1,12 @@
 Otjru::Application.routes.draw do
+
+  root to: redirect("/en")
+  devise_for :admin_users, ActiveAdmin::Devise.config
+  ActiveAdmin.routes(self)
   match '/data' => 'data#index'
-  match '/:locale/page/step1' => 'page#step1'
-  match '/:locale/page/step2' => 'page#step2'
-  match '/:locale/page/step3' => 'page#step3'
-  match '/:locale/page/step4' => 'page#step4'
-  match '/:locale/page/step5' => 'page#step5'
-  match '/:locale/page/step6' => 'page#step6'
-  match '/:locale/page/step7' => 'page#step7'
-  match '/:locale/page/step8' => 'page#step8'
-  match '/:locale/page/kennedy' => 'page#kennedy'
-  match '/:locale/step1' => 'home#index'
-  match '/:locale/step2' => 'home#index'
-  match '/:locale/step3' => 'home#index'
-  match '/:locale/step4' => 'home#index'
-  match '/:locale/step5' => 'home#index'
-  match '/:locale/step6' => 'home#index'
-  match '/:locale/step7' => 'home#index'
-  match '/:locale/step8' => 'home#index'
-  match '/:locale/kennedy' => 'home#index'
-  match '/:locale' => 'home#index'
-  match "/" => redirect("/ru")
+  match '/:locale/page/:page' => 'page#home'
+  match '/:locale/:page' => 'home#index'
+  match '/:locale' => redirect("/%{locale}/step1")
+
+
 end

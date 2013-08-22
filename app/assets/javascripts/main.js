@@ -19,7 +19,7 @@ function(namespace, $, Backbone, Index, google) {
   // Defining the application router, you can attach sub routers here.
   var Router = Backbone.Router.extend({
     routes: {
-      "": "step1",
+      "step1": "step1",
       "step2": "step2",
       "step3": "step3",
       "step4": "step4",
@@ -28,8 +28,7 @@ function(namespace, $, Backbone, Index, google) {
       "step7": "step7",
       "step8": "step8",
       "data": "data",
-      "kennedy": "kennedy",
-      ":hash": "step1"
+      "kennedy": "kennedy"
     },
     initialize: function() {
       this.bind('all', function (trigger, args) {

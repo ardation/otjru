@@ -38,6 +38,12 @@ html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-
 
 body { margin: 0; font-size: 1em; line-height: 1.4; }
 
+html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
 body, button, input, select, textarea { font-family: sans-serif; color: #222; }
 
 /*
@@ -434,6 +440,20 @@ td { vertical-align: top; }
   position: absolute;
   right: 267px;
   top: 225px;
+}
+#step1 .logo {
+  position: absolute;
+  right: 290px;
+  top: 290px;
+}
+#step1 .prize {
+  position: absolute;
+  font-family: 'Museo-300', Arial;
+  font-size: 14px;
+  right: 280px;
+  top: 195px;
+  width: 392px;
+  text-align: center;
 }
 #step1 .question {
   display:none;
@@ -961,6 +981,12 @@ td.first {
     background: url(<%= asset_path 'light_wool.png' %>) repeat;
     border-top:5px #21c6f4 solid;
     border-radius:0 0 5px 5px;
+  }
+  #step1 .logo {
+    display:none;
+  }
+  #step1 .prize {
+    display:none;
   }
   #magazine_border {
     display:none;
