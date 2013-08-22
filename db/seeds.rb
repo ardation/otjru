@@ -7,13 +7,6 @@ AdminUser.create([
 ], :without_protection => true )
 
 
-
-Answer.create([
-  { :content_id => nil, :person_id => nil, :data => nil, :created_at => nil, :updated_at => nil }
-], :without_protection => true )
-
-
-
 Content.create([
   { :content_type => 1, :foreign_id => 9829, :name => "Place", :created_at => "2013-08-22 00:32:24", :updated_at => "2013-08-22 00:32:24" },
   { :content_type => 7, :foreign_id => 9831, :name => "Magazine", :created_at => "2013-08-22 00:33:02", :updated_at => "2013-08-22 00:33:02" },
@@ -27,16 +20,7 @@ Content.create([
   { :content_type => 7, :foreign_id => 9833, :name => "Journey", :created_at => "2013-08-22 00:33:26", :updated_at => "2013-08-22 01:26:10" }
 ], :without_protection => true )
 
-
-
 Outreach.create([
   { :url => "localhost", :mhubid => 7936, :created_at => "2013-08-19 01:57:25", :updated_at => "2013-08-22 04:23:12", :dial_code => "+64", :sms => "Hey! OTG SL.", :org_name => "Student Life", :prize_message => "with a chance to win a $250 voucher to fly anywhere!", :logo_file_name => "logo-f18f531b0fe58ea11823141a649c0dfb.png", :logo_content_type => "image/png", :logo_file_size => 16630, :logo_updated_at => "2013-08-22 04:19:17", :prize_message_long => "Complete this survey and get on the journey with a chance to win 5000p of free flights" }
 ], :without_protection => true )
-
-
-
-Person.create([
-  { :first_name => nil, :last_name => nil, :mobile => nil, :email => nil, :gender => nil, :foreign_id => nil, :created_at => nil, :updated_at => nil, :outreach => nil }
-], :without_protection => true )
-
 
