@@ -709,10 +709,13 @@ td {
 }
 
 #step1 {
+  transition: bottom 0.5s, margin-bottom 0.5s;
   position: absolute;
   margin:0;
+  margin-bottom:190px;
   left:20px;
   bottom:10%;
+  top:auto;
   height: 200px;
   width: 500px;
   z-index: 10000;
@@ -723,14 +726,21 @@ td {
   }
   .logo {
     position: absolute;
-    right: 0;
-    bottom: 300px;
+    right: 20px;
+    top: 20px;
   }
   .prize {
     font-family: 'Museo-500', Arial;
     color: #000;
-    font-size: 14px;
+    font-size: 18px;
     text-align: center;
+    h1 {
+      font-family: 'Museo-700', Arial;
+      font-size: 40px;
+      color:red;
+      margin:0;
+      margin-top:40px;
+    }
   }
   .question {
     display: none;
@@ -753,9 +763,10 @@ td {
   height:342px;
   background: image_url("ground.png") top repeat-x;
   z-index: 9999;
+  transition: bottom 0.5s, margin-bottom 0.5s;
 }
 #bike {
-  transition:right 2s ease-out;
+  transition:right 2s ease-out, bottom 0.5s, margin-bottom 0.5s;
   position:absolute;
   bottom:10%;
   margin-bottom:164px;
@@ -766,6 +777,7 @@ td {
   z-index: 9998;
 }
 #tree {
+  transition: bottom 0.5s, margin-bottom 0.5s;
   position:absolute;
   bottom:10%;
   margin-bottom:120px;
@@ -1272,6 +1284,9 @@ td.first {
       bottom: 100px !important;
     }
   }
+  #tree, #dirt, #grass, #bike {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -1495,12 +1510,6 @@ td.first {
 }
 
 @media screen and (max-height: 250px) {
-  /*#lower-foreground {
-    display:none;
-  }
-  #footer {
-    display:none;
-  }*/
   #step1 #start, #step2 .next, #step3 .next {
     bottom: 10px;
   }
@@ -1517,6 +1526,24 @@ td.first {
     /* Safari and Chrome */
     -o-transition: top 0.5s;
     /* Opera */
+  }
+  #dirt {
+    display:none;
+  }
+  #grass {
+    bottom:-170px;
+  }
+  #bike {
+    bottom:0;
+    margin-bottom:0;
+  }
+  #tree {
+    bottom:0;
+    margin-bottom:0;
+  }
+  #step1 {
+    bottom:0;
+    margin-bottom:20px;
   }
 }
 
