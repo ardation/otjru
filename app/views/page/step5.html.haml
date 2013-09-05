@@ -1,0 +1,26 @@
+#step5.box.cyan
+  .option_position
+    .question= t 'step5.question'
+    %br/
+    %table
+      %tbody
+        %tr
+          %td
+            %label.label_radio{:for => t('step5.option1', locale: :en)}
+              %input{:id => t('step5.option1', locale: :en), :name => "step5", :type => "radio", :class => "negative", :value => t('step5.option1', locale: :en)}/
+              %br/
+              %strong= t 'step5.option1'
+          %td
+            %label.label_radio{:for => t('step5.option2', locale: :en)}
+              %input{:id => t('step5.option2', locale: :en), :name => "step5", :type => "radio", :value => t('step5.option2', locale: :en)}/
+              %br/
+              %strong= t 'step5.option2'
+          %td
+            %label.label_radio{:for => t('step5.option3', locale: :en)}
+              %input{:id => t('step5.option3', locale: :en), :name => "step5", :type => "radio", :value => t('step5.option3', locale: :en)}/
+              %br/
+              %strong= t 'step5.option3'
+  .error
+    %strong= t 'misc.forgot'
+    = t 'step5.error'
+  %a.button.next= t 'misc.next'

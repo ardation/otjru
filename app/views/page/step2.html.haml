@@ -1,0 +1,9 @@
+#step2
+  .inputbox
+    #step2_text.question= t 'step2.question'
+    %input#locality{:placeholder => t('step2.placeholder'), :type => "text"}/
+  #map_canvas
+  .error
+    %strong= t 'misc.forgot'
+    = t 'step2.error'
+  %a.button.next= t 'misc.next'

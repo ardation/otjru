@@ -25,3 +25,7 @@ gem 'aws-sdk'
 gem 'paperclip', '~> 3.0'
 
 gem 'seed_dump'
+
+gem 'delayed_job_active_record'
+#gem 'localeapp'
+gem 'haml'

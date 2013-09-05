@@ -1,0 +1,44 @@
+#step6a.box.red
+  .option_position
+    .question= t 'step6a.question'
+    %br/
+    %table
+      %tbody
+        %tr
+          %td
+            %label.label_radio{:for => "i1"}
+              %input#i1{:name => "step6a", :type => "radio", :value => "1"}/
+              = succeed "1" do
+                %br/
+              %br/
+              %strong= t 'step6a.option1'
+          %td
+            %label.label_radio.hide_small{:for => "i2"}
+              %input#i2{:name => "step6a", :type => "radio", :value => "2"}/
+              = succeed "2" do
+                %br/
+          %td
+            %label.label_radio{:for => "i3"}
+              %input#i3{:name => "step6a", :type => "radio", :value => "3"}/
+              %br/
+              %span.non_mobile 3
+              %span.mobile 2
+              %br/
+              %strong= t 'step6a.option2'
+          %td
+            %label.label_radio.hide_small{:for => "i4"}
+              %input#i4{:name => "step6a", :type => "radio", :value => "4"}/
+              = succeed "4" do
+                %br/
+          %td
+            %label.label_radio{:for => "i5"}
+              %input#i5{:name => "step6a", :type => "radio", :value => "5"}/
+              %br/
+              %span.non_mobile 5
+              %span.mobile 3
+              %br/
+              %strong= t 'step6a.option3'
+  .error
+    %strong= t 'misc.forgot'
+    = t 'step6a.error'
+  %a.button.next= t 'misc.next'

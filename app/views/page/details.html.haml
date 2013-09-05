@@ -1,0 +1,84 @@
+#details.box.cyan
+  .option_position
+    %span.question= t 'details.titles.main'
+    %hr/
+    %table#table1
+      %thead
+        %tr
+          %th.header{:colspan => "2"}
+            %span.question= t 'details.titles.personal'
+      %tbody
+        %tr
+          %td.first
+            = t 'details.name.title'
+          %td
+            %input#fname{:placeholder => t('details.name.first_name.placeholder'), :type => "text"}/
+            %input#lname{:placeholder => t('details.name.last_name.placeholder'), :type => "text"}/
+        %tr
+          %td.first
+            = t 'details.gender.title'
+          %td
+            %table
+              %tbody
+                %tr
+                  %td
+                    %label.label_radio{:for => "m"}
+                      %input#m{:name => "gender", :type => "radio", :value => "m"}/
+                      = t 'details.gender.male'
+                  %td
+                    %label.label_radio{:for => "f"}
+                      %input#f{:name => "gender", :type => "radio", :value => "f"}/
+                      = t 'details.gender.female'
+        %tr
+          %td.first
+            = t 'details.mobile.title'
+          %td
+            %input#mobile{:type => "tel"}/
+        %tr
+          %td.first
+            = t 'details.email.title'
+          %td
+            %input#email{:type => "email"}/
+    %table#table2
+      %thead
+        %tr
+          %th.header{:colspan => "2"}
+            %span.question= t 'details.titles.education'
+      %tbody
+        %tr
+          %td.first
+            = t 'details.university.title'
+          %td
+            %input#university{:style => "display: block", :type => "text"}/
+        %tr
+          %td.first
+            = t 'details.faculty.title'
+          %td
+            %input#faculty{:style => "display: block", :type => "text"}/
+        %tr
+          %td.first
+            = t 'details.year.title'
+          %td
+            %table
+              %tbody
+                %tr
+                  %td
+                    %label.label_radio{:for => "y1"}
+                      %input#y1{:name => "year", :type => "radio", :value => "1"}/
+                      1
+                  %td
+                    %label.label_radio{:for => "y2"}
+                      %input#y2{:name => "year", :type => "radio", :value => "2"}/
+                      2
+                  %td
+                    %label.label_radio{:for => "y3"}
+                      %input#y3{:name => "year", :type => "radio", :value => "3"}/
+                      3
+                  %td
+                    %label.label_radio{:for => "y4"}
+                      %input#y4{:name => "year", :type => "radio", :value => "4+"}/
+                      4+
+  .error
+    %strong= t 'misc.forgot'
+    %span#errorkind LOL
+  %a.button.next= t 'misc.next'

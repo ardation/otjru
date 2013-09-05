@@ -2,7 +2,6 @@ class Person < ActiveRecord::Base
   has_many :answers, dependent: :destroy
   accepts_nested_attributes_for :answers
   attr_accessible :email, :first_name, :foreign_id, :gender, :last_name, :mobile, :outreach, :answers_attributes
-  after_create :sync
   validates_uniqueness_of :mobile, :scope => :outreach
 
   def sync

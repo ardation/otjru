@@ -1,62 +1,90 @@
 ru:
- step1_question: "Прими участие в опросе и получи возможность выиграть сертификат на 5000 рублей, чтобы улететь на самолете - куда хочешь!"
- location_question: "Какое путешествие запомнилось тебе больше всего?"
- location_in_the_world: ""
- location_error: "Укажи место"
- location_placeholder: "Укажи место"
- magazine_question: "Мне будет интересно прочитать бесплатную статью"
- magazine_opt1: "Честно о Сексе"
- magazine_opt2: "Как Знать Бога лично"
- magazine_opt3: "Стресс"
- magazine_opt4: "10 Советов первокурснику"
- spiritual_question: "Я бы хотел принять участие в"
- spiritual_opt1: '"английских клубах" с носителями языка'
- spiritual_opt2: 'семинарах "Нравственность в бизнесе"'
- spiritual_opt3: "проектах социальной помощи"
- spiritual_opt4: "обсуждениях на духовную тему"
- spiritual_opt5: "спортивных мероприятиях и играх"
- spiritual_error: "Сделать выбор"
- interest_question: "Тебе интересно было бы узнать об Иисусе Христе?"
- interest_opt1: "Нет"
- interest_opt2: "может быть"
- interest_opt3: "очень"
- interest_opt4: "Уже христианин"
- interest_error: "Сделать выбор"
- kennedy_question: "Ты доволен своей духовной жизнью?"
- kennedy_opt1: "Не доволен"
- kennedy_opt2: "Доволен"
- kennedy_error: "Сделать выбор"
- step6_question: "Расскажи нам о себе"
- step6_name: "О себе"
- step6_name_first: "Имя"
- step6_name_last: "Фамилия"
- step6_gender: "пол"
- step6_gender_male: "мужской"
- step6_gender_female: "женский"
- step6_education: "Образование"
- step6_personal: "Личное"
- step6_mobile: "Мобильный телефон"
- step6_email: "электронной почте"
- step6_university: "Институт"
- step6_faculty: "Факультет"
- step6_year: "Курс"
- step6_error_fname: "Введите имя"
- step6_error_lname: "Введите фамилию"
- step6_error_gender: "Выберите свой ​​пол"
- step6_error_mobile: "Введите правильный номер телефона"
- step6_error_email: "введите ваш адрес электронной"
- step6_error_university: "Введите ваш университет"
- step6_error_faculty: "Введите ваш факультет"
- step6_error_year: "Выберите год в университете"
- step7_processing: "обработкаe"
- step8_message: "К этому моменту вы должны иметь подтверждение въезда. Удачи!"
- finish: "добить"
- reset: "сброс"
- start: "Начать"
- forgot: "Введи, пожалуйста, свой ответ!"
- next: "Вперед"
- data_entry: "Ввод данных"
- switch: "Change to English"
- switch_tag: "en"
- otj: "В путешествие"
- student_life: "Студенческая жизнь"
+  step1:
+    question: Прими участие в опросе и получи возможность выиграть сертификат на 5000 рублей, чтобы улететь на самолете - куда хочешь!
+  step2:
+    question: Какое путешествие запомнилось тебе больше всего?
+    error: Укажи место
+    placeholder: Укажи место
+  step3:
+    question: 
+    option1: 
+    option2: 
+    option3: 
+    option4: 
+    error: Сделать выбор
+  step4:
+    question: 
+    option1: 
+    option2: 
+    option3: 
+    option4: 
+    error: Сделать выбор
+  step5:
+    question: 
+    option1: 
+    option2: 
+    option3: 
+    error: 
+  step6a:
+    question: 
+    option1: 
+    option2: 
+    option3: 
+    error: 
+  step6b:
+    question: 
+    option1: 
+    option2: 
+    option3: 
+    error: 
+    text_answer: 
+  details:
+    titles:
+      main: Расскажи нам о себе
+      personal: Личное
+      education: Образование
+    name:
+      title: О себе
+      first_name:
+        placeholder: Имя
+        error: Введите имя
+      last_name:
+        placeholder: Фамилия
+        error: Введите фамилию
+    gender:
+      title: пол
+      male: мужской
+      female: женский
+      error: Выберите свой ​​пол
+    university:
+      title: Институт
+      error: Введите ваш университет
+    mobile:
+      title: Мобильный телефон
+      error: Введите правильный номер телефона
+    faculty:
+      title: Факультет
+      error: Введите ваш факультет
+    email:
+      title: электронной почте
+      error: введите ваш адрес электронной
+    year:
+      title: Курс
+      error: Выберите год в университете
+    title:
+      education: 
+  step7:
+    processing: обработкаe
+  step8:
+    message: К этому моменту вы должны иметь подтверждение въезда. Удачи!
+  misc:
+    finish: добить
+    reset: сброс
+    start: Начать
+    forgot: Введи, пожалуйста, свой ответ!
+    next: Вперед
+    data_entry: Ввод данных
+    switch: Change to English
+    switch_tag: en
+    otj: В путешествие
+    student_life: Студенческая жизнь

@@ -16,16 +16,9 @@ class MissionHubCrm
       when Content::SHORT_ANSWER
         answers[answer.content.foreign_id] = answer.data
       when Content::CHECK_BOX
-        answer_array = JSON.parse(answer.data)
-        final = {}
-        JSON.parse(answer.content.data)["Answers"].split(',').each_with_index do |value, index|
-          if answer_array.include?(value)
-            final[index.to_s] = value
-          else
-            final[index.to_s] = ""
-          end
+        unless answer.data.blank?
+          answers[answer.content.foreign_id] = JSON.parse(answer.data).to_sentence(last_word_connector:',')
         end
-        answers[answer.content.foreign_id] = final
       when Content::DROPDOWN
         answers[answer.content.foreign_id] = answer.data
       when Content::RADIO_BUTTON
