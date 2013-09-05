@@ -623,7 +623,7 @@ Index.Views.step7 = Backbone.View.extend({
 Index.Views.step8 = Backbone.View.extend({
   template: I18n.locale + "/page/step8",
   events: {
-    'click .next': 'next',
+    'click #finish': 'next',
   },
   render: function(done) {
     var view = this;

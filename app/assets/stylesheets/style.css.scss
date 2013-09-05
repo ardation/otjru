@@ -59,25 +59,6 @@ audio:not([controls]), [hidden] {
  * 3. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
  */
 
-html {
-  font-size: 100%;
-  overflow-y: scroll;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-}
-
-body {
-  margin: 0;
-  font-size: 1em;
-  line-height: 1.4;
-}
-
-html {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-}
-
 body, button, input, select, textarea {
   font-family: sans-serif;
   color: #222;
@@ -708,44 +689,6 @@ td {
   }
 }
 
-#step1 {
-  transition: bottom 0.5s, margin-bottom 0.5s;
-  position: absolute;
-  margin:0;
-  margin-bottom:190px;
-  left:20px;
-  bottom:10%;
-  top:auto;
-  height: 200px;
-  width: 500px;
-  z-index: 10000;
-  #start {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-  }
-  .logo {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-  }
-  .prize {
-    font-family: 'Museo-500', Arial;
-    color: #000;
-    font-size: 18px;
-    text-align: center;
-    h1 {
-      font-family: 'Museo-700', Arial;
-      font-size: 40px;
-      color:red;
-      margin:0;
-      margin-top:40px;
-    }
-  }
-  .question {
-    display: none;
-  }
-}
 #dirt {
   position:absolute;
   bottom:0;
@@ -775,6 +718,17 @@ td {
   height:311px;
   background: image_url("bike.png") no-repeat;
   z-index: 2000;
+  &.flip {
+    transition:left 2s ease-out;
+    left:100%;
+    right:auto;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+  }
 }
 #tree {
   transition: bottom 0.5s, margin-bottom 0.5s;
@@ -786,6 +740,55 @@ td {
   height:480px;
   background: image_url("spring_tree.png") center center repeat-x;
   z-index: 2000;
+}
+
+#step1, #step8 {
+  transition: bottom 0.5s, margin-bottom 0.5s;
+  position: absolute;
+  margin:0;
+  margin-bottom:190px;
+  left:20px;
+  bottom:10%;
+  top:auto;
+  height: 200px;
+  width: 500px;
+  z-index: 10000;
+  #start, #finish {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+  }
+  .logo {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  .prize {
+    font-family: 'Museo-500', Arial;
+    color: #000;
+    font-size: 18px;
+    text-align: center;
+    h1 {
+      font-family: 'Museo-700', Arial;
+      font-size: 40px;
+      color:red;
+      margin:0;
+      margin-top:40px;
+    }
+    h2 {
+      font-size: 28px;
+      color:red;
+      margin:0;
+      margin-top:50px;
+    }
+  }
+  .question {
+    display: none;
+  }
+  &#step8 {
+    right:20px;
+    left:auto;
+  }
 }
 
 #step2 {
@@ -1383,7 +1386,7 @@ td.first {
     margin-top: 20px;
     height: 411px;
   }
-  #step1 #start, #step2 .next, #step3 .next, #step4 .next, #step5 .next, #details .next, #step8 .next, #step6a .next, #step6b .next {
+  #step1 #start, #step2 .next, #step3 .next, #step4 .next, #step5 .next, #details .next, #step8 .next, #step6a .next, #step6b .next, #finish {
     padding: 5px;
     background: #ff5c5c image_url("right.png") center right no-repeat;
     border-radius: 5px;
@@ -1511,13 +1514,13 @@ td.first {
 }
 
 @media screen and (max-height: 250px) {
-  #step1 #start, #step2 .next, #step3 .next {
+  #step1 #start, #step1 #finish, #step2 .next, #step3 .next {
     bottom: 10px;
   }
 }
 
 @media screen and (max-height: 768px) {
-  #step3, #step4, #step5, #details, #step7, #step8, #step6a {
+  #step3, #step4, #step5, #details, #step7, #step6a {
     top: 50px;
     margin-top: 0;
     transition: top 0.5s;
@@ -1546,13 +1549,17 @@ td.first {
     bottom:0;
     margin-bottom:20px;
   }
+  #step8 {
+    bottom:30px;
+    margin-bottom:20px;
+  }
 }
 
 @media screen and (max-height: 620px) {
   #lower-foreground {
     height: auto;
   }
-  #step3, #step4, #step5, #details, #step7, #step8, #step6a {
+  #step3, #step4, #step5, #details, #step7, #step6a {
     top: 20px;
     margin-top: 0;
   }

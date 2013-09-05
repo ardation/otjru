@@ -197,7 +197,9 @@ var Router = Backbone.Router.extend({
     var route = this;
     var index = new Index.Views.step8;
     index.render(function(el) {
-      route.stepTransition(el , "#step8");
+      route.stepTransition(el , "#step8", function() {
+        $('#bike').delay(200).css('left', '20px');
+      });
     });
   },
   kennedy: function(hash) {
