@@ -30,22 +30,22 @@
 
 <!-- Main container -->
 <div id="container">
-<div id="upper-foreground">
-  <div>
-  </div>
-</div>
-<div role="main" id="main">
-  <div>
+  <div id="upper-foreground">
     <div>
     </div>
   </div>
-</div>
-<div id="lower-foreground">
+  <div role="main" id="main">
+    <div>
+      <div>
+      </div>
+    </div>
+  </div>
+  <div id="lower-foreground">
+  </div>
   <div id="footer">
     <a href="step1" id="reset" class="clickable"><%=t 'misc.reset' %></a>
     <a href="/<%=t 'misc.switch_tag' %>" id="language" class="clickable" data-bypass><%=t 'misc.switch' %></a>
   </div>
-</div>
 </div>
 <!-- Application source -->
 <script src="http://maps.google.com/maps/api/js?libraries=places&sensor=true&language=<%= I18n.locale %>" type="text/javascript"></script>

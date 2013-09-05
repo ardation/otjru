@@ -1,9 +1,11 @@
 #step1.box.cyan
-  .question= @outreach.prize_message_long
+  .question
+    %h1= t 'step1.get_journey'
+    = t 'step1.prize_message', amount: @outreach.prize_message
   .logo= image_tag @outreach.logo.url
   .prize
     %h1= t 'step1.get_journey'
-    = @outreach.prize_message
+    = t 'step1.prize_message', amount: @outreach.prize_message
   %a#start.button{:href => "step2"}= t 'misc.start'
 #dirt
 #tree

@@ -753,7 +753,7 @@ td {
   left:0;
   height:10%;
   background: #5a463d;
-  z-index: 9999;
+  z-index: 2001;
 }
 #grass {
   position:absolute;
@@ -762,7 +762,7 @@ td {
   left:0;
   height:342px;
   background: image_url("ground.png") top repeat-x;
-  z-index: 9999;
+  z-index: 2001;
   transition: bottom 0.5s, margin-bottom 0.5s;
 }
 #bike {
@@ -774,7 +774,7 @@ td {
   width:463px;
   height:311px;
   background: image_url("bike.png") no-repeat;
-  z-index: 9998;
+  z-index: 2000;
 }
 #tree {
   transition: bottom 0.5s, margin-bottom 0.5s;
@@ -785,7 +785,7 @@ td {
   right:0;
   height:480px;
   background: image_url("spring_tree.png") center center repeat-x;
-  z-index: 9998;
+  z-index: 2000;
 }
 
 #step2 {
@@ -1017,6 +1017,7 @@ td {
 }
 
 #footer {
+  z-index: 5000;
   position: fixed;
   bottom: 10px;
   left: 10px;
