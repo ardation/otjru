@@ -123,6 +123,7 @@ GEM
     mime-types (1.24)
     multi_json (1.7.9)
     multi_xml (0.5.5)
+    newrelic_rpm (3.6.6.147)
     nokogiri (1.5.10)
     orm_adapter (0.4.0)
     paperclip (3.4.2)
@@ -212,6 +213,7 @@ DEPENDENCIES
   jquery-rails (= 2.3.0)
   json
   localeapp
+  newrelic_rpm
   paperclip (~> 3.0)
   pg
   rails (= 3.2.13)

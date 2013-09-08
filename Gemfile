@@ -29,3 +29,5 @@ gem 'seed_dump'
 gem 'delayed_job_active_record'
 gem 'localeapp'
 gem 'haml'
+
+gem 'newrelic_rpm'
