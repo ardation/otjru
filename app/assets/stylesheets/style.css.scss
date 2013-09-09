@@ -1285,6 +1285,9 @@ td.first {
 }
 
 @media screen and (max-width: 800px) {
+  #lower-foreground {
+    display:none;
+  }
   #dirt, #tree, #bike {
     display:none;
   }
@@ -1299,7 +1302,7 @@ td.first {
   }
   #step2 .error {
     position: absolute;
-    bottom: 130px;
+    bottom: 100px;
     left: 0;
     right: 0;
     top: auto;
