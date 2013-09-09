@@ -1,43 +1,45 @@
 ru:
   step1:
-    question: Прими участие в опросе и получи возможность выиграть сертификат на 5000 рублей, чтобы улететь на самолете - куда хочешь!
+    question: Заполни анкету и получи шанс выиграть велосипед
+    get_journey: Отправся в путешествие
+    prize_message: с возможностью выиграть велосипед.
   step2:
     question: Какое путешествие запомнилось тебе больше всего?
     error: Укажи место
     placeholder: Укажи место
   step3:
-    question: 
-    option1: 
-    option2: 
-    option3: 
-    option4: 
+    question: Я бы хотел получить бесплатно студенческий планер, в котором есть статьи
+    option1: Тайм менеджмент
+    option2: Секрет хорошего лидера
+    option3: Близость и любовь
+    option4: "Иисус - модель верховного лидера"
     error: Сделать выбор
   step4:
-    question: 
-    option1: 
-    option2: 
-    option3: 
-    option4: 
+    question: "Я бы хотел узнать больше о таких событиях:"
+    option1: Дискуссии на духовные темы (вечером)
+    option2: Спорт и игры (после обеда)
+    option3: Разговорный английский (вечером)
+    option4: Короткометражные фильмы (вечером)
     error: Сделать выбор
   step5:
-    question: 
-    option1: 
-    option2: 
-    option3: 
-    error: 
-  step6a:
-    question: 
-    option1: 
-    option2: 
-    option3: 
-    error: 
+    question: Есть ли у тебя личные отношения с Иисусом Христом?
+    option1: Нет
+    option2: Может быть
+    option3: Да
+    error: Сделать выбор
+  step6a: 
+    question: Тебе интересно было бы узнать об Иисусе Христе?
+    option1: Нет
+    option2: Может быть
+    option3: Очень хочу
+    error: Выбери ответ
   step6b:
-    question: 
-    option1: 
-    option2: 
-    option3: 
-    error: 
-    text_answer: 
+    question: Хотели бы вы помогать студентам вашего университета узнать  Иисуса Христа? 
+    option1: Нет
+    option2: Может быть
+    option3: Да
+    error: Выбери ответ
+    text_answer: Напиши свой ответ
   details:
     titles:
       main: Расскажи нам о себе
@@ -66,15 +68,13 @@ ru:
       title: Факультет
       error: Введите ваш факультет
     email:
-      title: электронной почте
+      title: Электронная почта
       error: введите ваш адрес электронной
     year:
       title: Курс
       error: Выберите год в университете
-    title:
-      education: 
   step7:
-    processing: обработкаe
+    processing: В обработкe
   step8:
     message: К этому моменту вы должны иметь подтверждение въезда. Удачи!
   misc:
