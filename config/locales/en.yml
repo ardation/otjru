@@ -1,6 +1,6 @@
 en:
   step1:
-    question: Complete this survey and get on the journey with a chance to win a bicycle
+    question: Complete this survery and receive a chance to win a Mountain Bike
     get_journey: GET ON THE JOURNEY
     prize_message: "with a chance to win a bicycle worth %{amount}!"
   step2:
@@ -8,27 +8,27 @@ en:
     error: Enter a location
     placeholder: Enter a location
   step3:
-    question: I would like a free student planner that also helps with
-    option1: Time Management
-    option2: Secrets of a good leader
-    option3: Intimacy and Love
-    option4: Jesus - A super model of a leader
+    question: Life is a journey.  Where are you located on it right now?
+    option1: I am on the pinnacle of success
+    option2: Going up the summit
+    option3: Going with the flow
+    option4: Stuck in a swamp
     error: Make a selection
   step4:
-    question: I'd like to hear more about these events
-    option1: Spiritual Discussion Night
-    option2: Sports and Games Afternoon
-    option3: English-speaking Café Night
-    option4: Short Film Night
+    question: I would be interested in receiving a planner or article on...
+    option1: Secrets of a good Leader
+    option2: Intimacy and Love
+    option3: Does God answer prayer?
+    option4: Connecting with the Divine
     error: Make a selection
   step5:
-    question: Do you have a personal relationship with Jesus Christ?
+    question: In life's spiritual journey do you have a personal relationship with Jesus Christ?
     option1: 'No'
     option2: Maybe
     option3: 'Yes'
     error: Make a selection
   step6a:
-    question: How interested are you in having a chat about how to BEGIN A JOURNEY with Jesus Christ?
+    question: Would you be interested in having a chat with someone about how to BEGIN A JOURNEY with Jesus Christ?
     option1: 'No'
     option2: Maybe
     option3: 'Yes'
