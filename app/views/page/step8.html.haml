@@ -2,7 +2,10 @@
   .option_position
     .prize
       %h2= t 'step8.message'
-  .logo= image_tag @outreach.logo.url
+  .logo
+    %a{:href => @outreach.link_url}
+      = @outreach.link_text
+      = image_tag @outreach.logo.url
   %a#finish.button
     = t 'misc.finish'
 

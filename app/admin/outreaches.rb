@@ -5,9 +5,11 @@ ActiveAdmin.register Outreach do
       f.input :mhubid               
       f.input :dial_code           
       f.input :sms          
-      f.input :org_name          
-      f.input :english_only          
-      f.input :logo, as: :file
+      f.input :org_name   
+      f.input :link_url   
+      f.input :link_text               
+      f.input :logo, as: :file   
+      f.input :english_only  
     end                               
     f.actions                         
   end  

@@ -2,7 +2,10 @@
   .question
     %h1= t 'step1.get_journey'
     = t 'step1.prize_message'
-  .logo= image_tag @outreach.logo.url
+  .logo
+    %a{:href => @outreach.link_url, target: "_blank"}
+      = @outreach.link_text
+      = image_tag @outreach.logo.url
   .prize
     %h1= t 'step1.get_journey'
     = t 'step1.prize_message'

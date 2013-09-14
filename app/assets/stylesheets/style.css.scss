@@ -781,6 +781,14 @@ td {
     position: absolute;
     right: 20px;
     top: 20px;
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      font-size:20px;
+    }
+    img {
+      margin-left:10px;
+    }
   }
   .prize {
     font-family: 'Museo-500', Arial;
