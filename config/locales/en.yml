@@ -1,8 +1,7 @@
 en:
   step1:
-    question: Complete this survery and receive a chance to win a Mountain Bike
     get_journey: GET ON THE JOURNEY
-    prize_message: "with a chance to win a bicycle worth %{amount}!"
+    prize_message: "with a chance to win a mountain bike!"
   step2:
     question: What is the coolest place you've been in the world?
     error: Enter a location
@@ -28,7 +27,7 @@ en:
     option3: 'Yes'
     error: Make a selection
   step6a:
-    question: Would you be interested in having a chat with someone about how to BEGIN A JOURNEY with Jesus Christ?
+    question: Would you be interested in talking with someone about how to BEGIN A JOURNEY with Jesus Christ?
     option1: 'No'
     option2: Maybe
     option3: 'Yes'

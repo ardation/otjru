@@ -6,8 +6,7 @@ ActiveAdmin.register Outreach do
       f.input :dial_code           
       f.input :sms          
       f.input :org_name          
-      f.input :prize_message     
-      f.input :prize_message_long          
+      f.input :english_only          
       f.input :logo, as: :file
     end                               
     f.actions                         

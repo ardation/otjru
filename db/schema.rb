@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130904223751) do
+ActiveRecord::Schema.define(:version => 20130913231351) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -81,17 +81,16 @@ ActiveRecord::Schema.define(:version => 20130904223751) do
   create_table "outreaches", :force => true do |t|
     t.string   "url"
     t.integer  "mhubid"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
     t.string   "dial_code"
     t.string   "sms"
     t.string   "org_name"
-    t.string   "prize_message"
     t.string   "logo_file_name"
     t.string   "logo_content_type"
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
-    t.string   "prize_message_long"
+    t.boolean  "english_only"
   end
 
   create_table "people", :force => true do |t|

@@ -1,5 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @org_name = Outreach.find_by_url(request.host).org_name
+  	@outreach = Outreach.find_by_url(request.host)
+  	render 'blank' if @outreach.nil?
   end
 end

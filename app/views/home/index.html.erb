@@ -9,7 +9,7 @@
 	<link rel="apple-touch-icon" href="<%= asset_path 'logo.png' %>"/>
 	<link rel="icon" type="image/png" href="<%= asset_path 'favicon.png' %>">
 
-	<title><%=t 'misc.otj' %> - <%= @org_name %></title>
+	<title><%=t 'misc.otj' %> - <%= @outreach.org_name %></title>
 
 	<script type="text/javascript">
 		var I18n = {};
@@ -44,7 +44,7 @@
   </div>
   <div id="footer">
     <a href="step1" id="reset" class="clickable"><%=t 'misc.reset' %></a>
-    <a href="/<%=t 'misc.switch_tag' %>" id="language" class="clickable" data-bypass><%=t 'misc.switch' %></a>
+    <% unless @outreach.english_only? %><a href="/<%=t 'misc.switch_tag' %>" id="language" class="clickable" data-bypass><%=t 'misc.switch' %></a><% end %>
   </div>
 </div>
 <!-- Application source -->

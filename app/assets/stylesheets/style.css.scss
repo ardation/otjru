@@ -580,7 +580,30 @@ td {
     page-break-after: avoid;
   }
 }
-
+#empty {
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  top:0;
+  background: image-url('triangular.png') repeat;
+  .block {
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:400px;
+    height:100px;
+    margin-left:-200px;
+    margin-top:-50px;
+    line-height: 100px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #fff;
+    background-color: rgba(255,255,255,0.2);
+    border:1px solid #ddd;
+    font-family: Georgia, Times, Serif;
+  }
+}
 #container {
   z-index: -2;
   position: fixed;
@@ -939,7 +962,7 @@ td {
 }
 
 #step4 .next {
-  margin-top: 110px;
+  margin-top: 70px;
 }
 
 #step5 .next {
