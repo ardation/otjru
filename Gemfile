@@ -30,3 +30,5 @@ gem 'delayed_job_active_record'
 gem 'haml'
 
 gem 'newrelic_rpm'
+
+gem "hirefire-resource"
