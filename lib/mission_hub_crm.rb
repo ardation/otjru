@@ -17,12 +17,21 @@ class MissionHubCrm
         answers[answer.content.foreign_id] = answer.data
       when Content::CHECK_BOX
         unless answer.data.blank?
-          answers[answer.content.foreign_id] = JSON.parse(answer.data).to_sentence(last_word_connector:',')
+          answer_array = JSON.parse(answer.data)
+          final = {}
+          JSON.parse(answer.content.data)["Answers"].split(',').each_with_index do |value, index|
+            if answer_array.include?(value)
+              final[index.to_s] = value
+            else
+              final[index.to_s] = ""
+            end
+          end
+          answers[answer.content.foreign_id] = final
         end
       when Content::DROPDOWN
         answers[answer.content.foreign_id] = answer.data
       when Content::RADIO_BUTTON
-        answers[answer.content.foreign_id] = answer.data
+          answers[answer.content.foreign_id] = answer.data
       when Content::CONTACT
         data = JSON.parse(answer.data)
         data.each do |key, value|
@@ -33,16 +42,6 @@ class MissionHubCrm
             answers[JSON.parse(answer.content.foreign_hash)["Degree"]] = value
           when "hall"
             answers[JSON.parse(answer.content.foreign_hash)["Halls"]] = value
-          end
-        end
-      when Content::MULTI_ANSWER
-        data = JSON.parse(answer.data)
-        data.each do |key, value|
-          case key
-          when "interest"
-            answers[JSON.parse(answer.content.foreign_hash)["Interest"]] = value
-          when "kennedy"
-            answers[JSON.parse(answer.content.foreign_hash)["Kennedy"]] = value
           end
         end
       end
