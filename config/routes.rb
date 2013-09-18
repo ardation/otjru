@@ -1,4 +1,7 @@
 Otjru::Application.routes.draw do
+  constraints(:host => /www.kirovograd.onthejourney.org.ua/) do
+    match "/*path" => redirect {|params, req| "http://kirovohrad.onthejourney.org.ua/#{params[:path]}"}
+  end
 
   root to: redirect("/en")
   devise_for :admin_users, ActiveAdmin::Devise.config
