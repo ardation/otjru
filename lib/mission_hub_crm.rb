@@ -17,16 +17,7 @@ class MissionHubCrm
         answers[answer.content.foreign_id] = answer.data
       when Content::CHECK_BOX
         unless answer.data.blank?
-          answer_array = JSON.parse(answer.data)
-          final = {}
-          JSON.parse(answer.content.data)["Answers"].split(',').each_with_index do |value, index|
-            if answer_array.include?(value)
-              final[index.to_s] = value
-            else
-              final[index.to_s] = ""
-            end
-          end
-          answers[answer.content.foreign_id] = final
+         answers[answer.content.foreign_id] = JSON.parse(answer.data).reject!(&:empty?).to_sentence(last_word_connector:"\n")
         end
       when Content::DROPDOWN
         answers[answer.content.foreign_id] = answer.data
