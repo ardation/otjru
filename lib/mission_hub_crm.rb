@@ -17,7 +17,7 @@ class MissionHubCrm
         answers[answer.content.foreign_id] = answer.data
       when Content::CHECK_BOX
         unless answer.data.blank?
-         answers[answer.content.foreign_id] = JSON.parse(answer.data).reject!(&:empty?).join("\n")
+         answers[answer.content.foreign_id] = JSON.parse(answer.data).reject!(&:empty?).join("\r\n")
         end
       when Content::DROPDOWN
         answers[answer.content.foreign_id] = answer.data
