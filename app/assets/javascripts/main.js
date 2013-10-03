@@ -21,6 +21,7 @@ var Router = Backbone.Router.extend({
     "step7": "step7",
     "step8": "step8",
     "data": "data",
+    "terms": "terms",
   },
   initialize: function() {
     this.bind('all', function (trigger, args) {
@@ -205,6 +206,15 @@ var Router = Backbone.Router.extend({
     index.render(function(el) {
       route.stepTransition(el , "#step8", function() {
         $('#bike').delay(200).css('left', '20px');
+      });
+    });
+  },
+  terms: function(hash) {
+    var route = this;
+    var index = new Index.Views.terms;
+    index.render(function(el) {
+      route.stepTransition(el , "#terms", function() {
+        
       });
     });
   },

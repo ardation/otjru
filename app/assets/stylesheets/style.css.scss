@@ -954,12 +954,18 @@ td {
   }
 }
 
+#tandc .text{
+  overflow: auto;
+  height:80%;
+  padding:0 20px;
+}
+
 #step2 .error {
   left: 10px;
   top: 145px;
 }
 
-#step3 .next, #step4 .next, #step5 .next, #details .next, #step8 .next, #step6a .next, #step6b .next, #data .next {
+#step3 .next, #step4 .next, #step5 .next, #details .next, #step8 .next, #step6a .next, #step6b .next, #data .next, #tandc .next {
   float: right;
   margin-right: -40px;
   margin-top: 50px;
@@ -967,6 +973,10 @@ td {
 
 .next, #start, #finish {
   line-height: 58px;
+}
+
+#tandc .next {
+  margin-top: 80px;
 }
 
 #step4 .next {
@@ -1074,8 +1084,10 @@ td {
     text-transform: uppercase;
     text-align: right;
     line-height: 16px;
+    margin-left:10px;
   }
   #reset {
+    margin-left:0;
     padding-left: 25px;
     background: rgba(34, 34, 34, 0.7) image_url("icon-reload.png") 5px center no-repeat;
     float: left;
@@ -1319,7 +1331,7 @@ td.first {
   #lower-foreground {
     display:none;
   }
-  #dirt, #tree, #bike {
+  #dirt, #tree, #bike, #grass {
     display:none;
   }
   .error {
@@ -1391,7 +1403,7 @@ td.first {
     line-height: 20px;
     margin-left: 0;
   }
-  #step1, #step3, #step4, #step5, #details, #step6a, #step6b, #step8 {
+  #step1, #step3, #step4, #step5, #details, #step6a, #step6b, #step8, #tandc {
     border: none;
     background: none;
     position: static;
@@ -1414,7 +1426,7 @@ td.first {
     margin-top: 20px;
     height: 411px;
   }
-  #step1 #start, #step2 .next, #step3 .next, #step4 .next, #step5 .next, #details .next, #step8 .next, #step6a .next, #step6b .next, #finish {
+  #step1 #start, #step2 .next, #step3 .next, #step4 .next, #step5 .next, #details .next, #step8 .next, #step6a .next, #step6b .next, #tandc .next, #finish {
     padding: 5px;
     background: #ff5c5c image_url("right.png") center right no-repeat;
     border-radius: 5px;
@@ -1453,11 +1465,32 @@ td.first {
   #magazine_border {
     display: none;
   }
-  #step3 .option_position, #step4 .option_position, #step5 .option_position, #details .option_position, #step8 .option_position, #step6a .option_position, , #step6b .option_position {
+  #step3 .option_position, #step4 .option_position, #step5 .option_position, #details .option_position, #step8 .option_position, #step6a .option_position, , #step6b .option_position, #tandc {
     margin: 10px;
     background: image_url("light_wool.png") repeat;
     padding: 10px;
     border-radius: 0 0 5px 5px;
+  }
+  #tandc {
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:120px;
+    right:0;
+    border-top: 5px #7dd3cf solid;
+    h4 {
+      margin:20px 20px 0 20px;
+    }
+    .text {
+      height:90%;
+    }
+    .next {
+      position: absolute;
+      bottom: -80px;
+      left: -10px;
+      right: -10px;
+      top: auto;
+    }
   }
   #step3 .option_position {
     border-top: 5px #ffaa59 solid;
