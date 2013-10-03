@@ -1,3 +1,9 @@
+$(function() {
+  $(window.applicationCache).bind("error", function() {
+    alert("There was an error when loading the cache manifest.");
+  });
+});
+
 if (!$.support.transition || $.browser.msie || (navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)))
   $.fn.transition = $.fn.animate;
 
