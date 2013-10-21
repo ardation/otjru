@@ -32,3 +32,5 @@ gem 'haml'
 gem 'newrelic_rpm'
 
 gem "hirefire-resource"
+
+gem "rack-offline"
