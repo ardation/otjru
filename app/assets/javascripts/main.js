@@ -107,7 +107,7 @@ var Router = Backbone.Router.extend({
             'disableDoubleClickZoom': false,
             'scrollwheel': false
           };
-          googlemap.addMapToCanvas( mapCanvas, myOptions, 50.450100,30.523400);
+          googlemap.addMapToCanvas( mapCanvas, myOptions, 53.6666667, 23.8333333);
           googlemap.autocomplete( $('#locality')[0] );
           googlemap.refresh();
         } else {

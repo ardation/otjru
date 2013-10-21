@@ -1,7 +1,7 @@
 en:
   step1:
     get_journey: GET ON THE JOURNEY
-    prize_message: "with a chance to win a mountain bike!"
+    prize_message: Complete this survey and receive a cool student planner!
   step2:
     question: What is the coolest place you've been in the world?
     error: Enter a location
