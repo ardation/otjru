@@ -1,0 +1,93 @@
+pl:
+  step1:
+    get_journey: GOTUJ SIĘ DO PODRÓŻY
+    prize_message: Wypełnij tę ankietę i otrzymaj szansę wygrania roweru
+  step2:
+    question: Jakie jest najfajniejsze miejsce na świecie w jakim byłeś?
+    error: Wybierz miejsce
+    placeholder: Wybierz miejsce
+  step3:
+    question: Życie to podróż. W jakim miejscu w swojej podróży znajdujesz się teraz?
+    option1: jestem u szczytu sukcesu
+    option2: wspinam się na szczyt
+    option3: płynę z prądem
+    option4: ugrzązłem w błocie
+    error: swój własny wariant
+  step4:
+    question: Byłbym zainteresowany otrzymaniem planera lub artykułu na temat...
+    option1: Sekrety dobrego Lidera
+    option2: Intymność i Miłość
+    option3: Czy Bóg odpowiada na modlitwę?
+    option4: Kontakt z Bogiem
+    error: Wybierz odpowiedź
+  step5:
+    question: Czy w swojej życiowej podróży masz osobistą relację z Jezusem Chrystusem?
+    option1: Nie
+    option2: Może
+    option3: 'Tak'
+    error: Wybierz odpowiedź
+  step6a:
+    question: Czy byłbyś zainteresowany rozmową o tym jak nawiązać przyjaźń z Jezusem Chrystusem?
+    option1: 'Nie'
+    option2: Może
+    option3: 'Tak'
+    error: Wybierz odpowiedź
+  step6b:
+    question: Czy chciałbyś pomóc innym studentom na twoim uniwersytecie poznawać Jezusa?
+    option1: 'Nie'
+    option2: Może
+    option3: 'Tak'
+    error: Wybierz odpowiedź
+    text_answer: Napisz nam swoją odpowiedź
+  details:
+    titles:
+      main: Tell us about yourself
+      personal: Osobisty
+      education: Wykształcenie
+    name:
+      title: O sobie
+      first_name:
+        placeholder: Imię
+        error: Wpisz twoje imię
+      last_name:
+        placeholder: Nazwisko
+        error: Wpisz twoje nazwisko
+    gender:
+      title: Płeć
+      male: Mężczyzna
+      female: Kobieta
+      error: Podaj swoją płeć
+    university:
+      title: Uczelnia
+      error: Wpisz twoją Uczelnię
+    mobile:
+      title: Telefon Komórkowy
+      error: Wprowadź twój numer telefonu
+    faculty:
+      title: Wydział
+      error: Wpisz twój Wydział
+    email:
+      title: Email
+      error: Wprowadź twój adres email
+    year:
+      title: Rok
+      error: Wybierz twój rok studiów
+    title:
+      education: 
+  step7:
+    processing: Przetwarzanie
+  step8:
+    message: Od tego momentu powinieneś mieć potwierdzenie o rejestracji. Powodzenia! 
+  misc:
+    reset: reset
+    terms_and_conditions: Terms and Conditions
+    back: Back
+    finish: Zakończ
+    forgot: Rozpocznij
+    next: Dalej
+    data_entry: Wprowadź swoją odpowiedź
+    start: Start
+    switch: Polska
+    switch_tag: pl
+    otj: GOTUJ SIĘ DO PODRÓŻY
+    student_life: Studenckie Życie
