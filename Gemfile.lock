@@ -82,6 +82,7 @@ GEM
     fastercsv (1.5.5)
     formtastic (2.2.1)
       actionpack (>= 3.0)
+    gli (2.7.0)
     haml (4.0.3)
       tilt
     has_scope (0.5.1)
@@ -105,6 +106,13 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     kgio (2.8.0)
+    localeapp (0.6.10)
+      gli
+      i18n
+      json
+      rack
+      rest-client
+      ya2yaml
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -191,6 +199,7 @@ GEM
     uuidtools (2.1.4)
     warden (1.2.1)
       rack (>= 1.0)
+    ya2yaml (0.31)
 
 PLATFORMS
   ruby
@@ -206,6 +215,7 @@ DEPENDENCIES
   httparty (~> 0.9.0)
   jquery-rails (= 2.3.0)
   json
+  localeapp
   newrelic_rpm
   paperclip (~> 3.0)
   pg

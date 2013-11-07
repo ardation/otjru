@@ -91,3 +91,6 @@ en:
     switch_tag: ru
     otj: On The Journey
     student_life: Student Christian Movement
+  i18n:
+    transliterate:
+      rule: {}
