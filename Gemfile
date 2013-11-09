@@ -37,6 +37,7 @@ gem "hirefire-resource"
 gem "rack-offline"
 gem 'localeapp'
 gem 'heroku-api'
+gem 'rails_12factor'
 
 group :development do
   gem 'rails-erd'
