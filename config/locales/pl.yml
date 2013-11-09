@@ -24,19 +24,19 @@ pl:
     question: Czy w swojej życiowej podróży masz osobistą relację z Jezusem Chrystusem?
     option1: Nie
     option2: Może
-    option3: 'Tak'
+    option3: Tak
     error: Wybierz odpowiedź
   step6a:
     question: Czy byłbyś zainteresowany rozmową o tym jak nawiązać przyjaźń z Jezusem Chrystusem?
-    option1: 'Nie'
+    option1: Nie
     option2: Może
-    option3: 'Tak'
+    option3: Tak
     error: Wybierz odpowiedź
   step6b:
     question: Czy chciałbyś pomóc innym studentom na twoim uniwersytecie poznawać Jezusa?
-    option1: 'Nie'
+    option1: Nie
     option2: Może
-    option3: 'Tak'
+    option3: Tak
     error: Wybierz odpowiedź
     text_answer: Napisz nam swoją odpowiedź
   details:
@@ -77,7 +77,7 @@ pl:
   step7:
     processing: Przetwarzanie
   step8:
-    message: Od tego momentu powinieneś mieć potwierdzenie o rejestracji. Powodzenia! 
+    message: Od tego momentu powinieneś mieć potwierdzenie o rejestracji. Powodzenia!
   misc:
     reset: reset
     terms_and_conditions: Terms and Conditions
@@ -91,3 +91,68 @@ pl:
     switch_tag: pl
     otj: GOTUJ SIĘ DO PODRÓŻY
     student_life: Studenckie Życie
+  devise:
+    confirmations:
+      confirmed: 
+      send_instructions: 
+      send_paranoid_instructions: 
+    failure:
+      already_authenticated: 
+      inactive: 
+      invalid: 
+      invalid_token: 
+      locked: 
+      not_found_in_database: 
+      timeout: 
+      unauthenticated: 
+      unconfirmed: 
+    mailer:
+      confirmation_instructions:
+        subject: 
+      reset_password_instructions:
+        subject: 
+      unlock_instructions:
+        subject: 
+    omniauth_callbacks:
+      failure: 
+      success: 
+    passwords:
+      no_token: 
+      send_instructions: 
+      send_paranoid_instructions: 
+      updated: 
+      updated_not_active: 
+    registrations:
+      destroyed: 
+      signed_up: 
+      signed_up_but_inactive: 
+      signed_up_but_locked: 
+      signed_up_but_unconfirmed: 
+      updated: 
+      update_needs_confirmation: 
+    sessions:
+      signed_in: 
+      signed_out: 
+    unlocks:
+      send_instructions: 
+      send_paranoid_instructions: 
+      unlocked: 
+  errors:
+    messages:
+      already_confirmed: 
+      confirmation_period_expired: 
+      expired: 
+      not_found: 
+      not_locked: 
+      not_saved: 
+  i18n:
+    transliterate:
+      rule: 
+  required: 
+  admin_user: 
+  outreach: 
+  activerecord:
+    models:
+      admin: 
+      outreach: 
+  update: 

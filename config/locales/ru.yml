@@ -1,91 +1,159 @@
 ru:
   step1:
     question: Заполни анкету и получи классынй ежедневник студента
-    get_journey: Отправься в путешествие
-    prize_message: Заполни анкету и получи классынй ежедневник студента
+    get_journey: 
+    prize_message: 
   step2:
-    question: Какое путешествие запомнилось тебе больше всего?
-    error: Укажи место
-    placeholder: Укажи место
+    question: 
+    error: 
+    placeholder: 
   step3:
-    question: Жизнь - это путешествие. Где ты сейчас находишься на жизненном пути?
-    option1: я на пике успеха
-    option2: взбираюсь на вершиину
-    option3: плыву по течению
-    option4: завяз в болоте
-    error: Сделать выбор
+    question: 
+    option1: 
+    option2: 
+    option3: 
+    option4: 
+    error: 
   step4:
-    question: "Я был бы заинтересован в прочтении статьи на следующую тему:"
-    option1: Секреты хорошего Лидера
-    option2: Близость и Любовь
-    option3: Отвечает ли Бог на наши молитвы?
-    option4: Соединяясь с Богом
-    error: Сделать выбор
+    question: 
+    option1: 
+    option2: 
+    option3: 
+    option4: 
+    error: 
   step5:
-    question: В твоем жизненном путешествии кем для тебя является Иисус Христос?
-    option1: Нет
-    option2: Может быть
-    option3: Да
-    error: Сделать выбор
-  step6a: 
-    question: Тебе интересно было бы узнать об Иисусе Христе?
-    option1: Нет
-    option2: Может быть
-    option3: Очень хочу
-    error: Выбери ответ
+    question: 
+    option1: 
+    option2: 
+    option3: 
+    error: 
+  step6a:
+    question: 
+    option1: 
+    option2: 
+    option3: 
+    error: 
   step6b:
-    question: Хотели бы вы помогать студентам вашего университета узнать больше об Иисусе Христе? 
-    option1: Нет
-    option2: Может быть
-    option3: Да
-    error: Выбери ответ
-    text_answer: Напиши свой ответ
+    question: 
+    option1: 
+    option2: 
+    option3: 
+    error: 
+    text_answer: 
   details:
     titles:
-      main: Расскажи нам о себе
-      personal: Личное
-      education: Образование
+      main: 
+      personal: 
+      education: 
     name:
-      title: О себе
+      title: 
       first_name:
-        placeholder: Имя
-        error: Введите имя
+        placeholder: 
+        error: 
       last_name:
-        placeholder: Фамилия
-        error: Введите фамилию
+        placeholder: 
+        error: 
     gender:
-      title: пол
-      male: мужской
-      female: женский
-      error: Выберите свой ​​пол
+      title: 
+      male: 
+      female: 
+      error: 
     university:
-      title: Место учебы
-      error: Введите ваш университет
+      title: 
+      error: 
     mobile:
-      title: Мобильный телефон
-      error: Введите правильный номер телефона
+      title: 
+      error: 
     faculty:
-      title: Факультет
-      error: Введите ваш факультет
+      title: 
+      error: 
     email:
-      title: Электронная почта
-      error: введите ваш адрес электронной
+      title: 
+      error: 
     year:
-      title: Курс
-      error: Выберите год в университете
+      title: 
+      error: 
+    title:
+      education: 
   step7:
-    processing: В обработкe
+    processing: 
   step8:
-    message: К этому моменту вы должны иметь подтверждение въезда. Удачи!
+    message: 
   misc:
-    finish: Завершить
-    reset: сброс
-    terms_and_conditions: Условия
-    back: назад
-    start: Начать
-    forgot: Введи, пожалуйста, свой ответ!
-    next: Вперед
-    data_entry: Ввод данных
-    switch: русский язык
-    otj: В путешествие
-    student_life: Студенческое Христианское Движение
+    finish: 
+    reset: 
+    terms_and_conditions: 
+    back: 
+    start: 
+    forgot: 
+    next: 
+    data_entry: 
+    switch: 
+    otj: 
+    student_life: 
+    switch_tag: 
+  devise:
+    confirmations:
+      confirmed: 
+      send_instructions: 
+      send_paranoid_instructions: 
+    failure:
+      already_authenticated: 
+      inactive: 
+      invalid: 
+      invalid_token: 
+      locked: 
+      not_found_in_database: 
+      timeout: 
+      unauthenticated: 
+      unconfirmed: 
+    mailer:
+      confirmation_instructions:
+        subject: 
+      reset_password_instructions:
+        subject: 
+      unlock_instructions:
+        subject: 
+    omniauth_callbacks:
+      failure: 
+      success: 
+    passwords:
+      no_token: 
+      send_instructions: 
+      send_paranoid_instructions: 
+      updated: 
+      updated_not_active: 
+    registrations:
+      destroyed: 
+      signed_up: 
+      signed_up_but_inactive: 
+      signed_up_but_locked: 
+      signed_up_but_unconfirmed: 
+      updated: 
+      update_needs_confirmation: 
+    sessions:
+      signed_in: 
+      signed_out: 
+    unlocks:
+      send_instructions: 
+      send_paranoid_instructions: 
+      unlocked: 
+  errors:
+    messages:
+      already_confirmed: 
+      confirmation_period_expired: 
+      expired: 
+      not_found: 
+      not_locked: 
+      not_saved: 
+  i18n:
+    transliterate:
+      rule: 
+  required: 
+  admin_user: 
+  outreach: 
+  activerecord:
+    models:
+      admin: 
+      outreach: 
+  update: 

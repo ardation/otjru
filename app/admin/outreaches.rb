@@ -1,4 +1,5 @@
 ActiveAdmin.register Outreach do
+
   index do
     column :org_name
     column :url
@@ -22,8 +23,8 @@ ActiveAdmin.register Outreach do
       f.input :logo, as: :file
     end
     f.inputs "Languages" do  
-      f.input :primary_locale
-      f.input :secondary_locale 
+      f.input :primary_locale, as: :select, collection: Dir.glob("#{Rails.root}/config/locales/*").map{ |o| o.gsub("#{Rails.root}/config/locales/", "").gsub(".yml", "") }
+      f.input :secondary_locale, as: :select, collection: Dir.glob("#{Rails.root}/config/locales/*").map{ |o| o.gsub("#{Rails.root}/config/locales/", "").gsub(".yml", "") }
       f.input :english_only, label: "Primary Locale Only"
     end       
     f.inputs "Location" do  
@@ -31,5 +32,16 @@ ActiveAdmin.register Outreach do
       f.input :lng, label: "Longitude"
     end                               
     f.actions                         
-  end  
+  end
+
+  action_item :only => :index do
+    link_to 'Pull Translations', action: :pull_translations
+  end
+
+  collection_action :pull_translations do
+    heroku = Heroku::API.new
+    heroku.post_ps('otjru', 'bundle exec localeapp pull')
+    flash[:notice] = "Successfully pulled translations from localeapp"
+    redirect_to :action => :index
+  end
 end
