@@ -6,6 +6,7 @@ gem 'rails', '3.2.13'
 gem 'pg'
 gem 'json'
 gem "httparty", "~> 0.9.0"
+gem 'puma'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -35,3 +36,11 @@ gem "hirefire-resource"
 
 gem "rack-offline"
 gem 'localeapp'
+
+group :development do
+  gem 'rails-erd'
+  gem 'foreman'
+  gem 'rails-footnotes', '>= 3.7.9'
+  gem "better_errors"
+  gem "binding_of_caller"
+end

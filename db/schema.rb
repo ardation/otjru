@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130914013201) do
+ActiveRecord::Schema.define(:version => 20131109024347) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -92,6 +92,10 @@ ActiveRecord::Schema.define(:version => 20130914013201) do
     t.boolean  "english_only"
     t.string   "link_url"
     t.string   "link_text"
+    t.string   "primary_locale"
+    t.string   "secondary_locale"
+    t.string   "lat"
+    t.string   "lng"
   end
 
   create_table "people", :force => true do |t|

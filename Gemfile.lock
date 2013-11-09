@@ -51,14 +51,21 @@ GEM
       nokogiri (< 1.6.0)
       uuidtools (~> 2.1)
     bcrypt-ruby (3.1.0)
+    better_errors (1.0.1)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
+    binding_of_caller (0.7.2)
+      debug_inspector (>= 0.0.1)
     bourbon (3.1.8)
       sass (>= 3.2.0)
       thor
     builder (3.0.4)
+    choice (0.1.6)
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.1)
       climate_control (>= 0.0.3, < 1.0)
+    coderay (1.1.0)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -66,6 +73,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    debug_inspector (0.0.2)
     delayed_job (3.0.5)
       activesupport (~> 3.0)
     delayed_job_active_record (0.4.4)
@@ -76,10 +84,14 @@ GEM
       orm_adapter (~> 0.1)
       railties (~> 3.1)
       warden (~> 1.2.1)
+    dotenv (0.9.0)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
     fastercsv (1.5.5)
+    foreman (0.63.0)
+      dotenv (>= 0.7)
+      thor (>= 0.13.6)
     formtastic (2.2.1)
       actionpack (>= 3.0)
     gli (2.7.0)
@@ -137,6 +149,8 @@ GEM
     polyamorous (0.5.0)
       activerecord (~> 3.0)
     polyglot (0.3.3)
+    puma (2.6.0)
+      rack (>= 1.1, < 2.0)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -153,6 +167,13 @@ GEM
       activesupport (= 3.2.13)
       bundler (~> 1.0)
       railties (= 3.2.13)
+    rails-erd (1.1.0)
+      activerecord (>= 3.0)
+      activesupport (>= 3.0)
+      choice (~> 0.1.6)
+      ruby-graphviz (~> 1.0.4)
+    rails-footnotes (3.7.9)
+      rails (>= 3.0.0)
     railties (3.2.13)
       actionpack (= 3.2.13)
       activesupport (= 3.2.13)
@@ -168,6 +189,7 @@ GEM
       railties (~> 3.1)
     rest-client (1.6.7)
       mime-types (>= 1.16)
+    ruby-graphviz (1.0.9)
     sass (3.2.10)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -208,8 +230,11 @@ DEPENDENCIES
   MissionHub
   activeadmin
   aws-sdk
+  better_errors
+  binding_of_caller
   coffee-rails (~> 3.2.1)
   delayed_job_active_record
+  foreman
   haml
   hirefire-resource
   httparty (~> 0.9.0)
@@ -219,8 +244,11 @@ DEPENDENCIES
   newrelic_rpm
   paperclip (~> 3.0)
   pg
+  puma
   rack-offline
   rails (= 3.2.13)
+  rails-erd
+  rails-footnotes (>= 3.7.9)
   rest-client
   sass-rails (~> 3.2.3)
   seed_dump

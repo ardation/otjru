@@ -87,8 +87,7 @@ en:
     next: Next
     data_entry: Data Entry
     start: Start
-    switch: русский язык
-    switch_tag: ru
+    switch: Switch To English
     otj: On The Journey
     student_life: Student Christian Movement
   i18n:

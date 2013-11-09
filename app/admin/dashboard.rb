@@ -5,8 +5,13 @@ ActiveAdmin.register_page "Dashboard" do
   content :title => proc{ I18n.t("active_admin.dashboard") } do
     div :class => "blank_slate_container", :id => "dashboard_default_message" do
       span :class => "blank_slate" do
-        span I18n.t("active_admin.dashboard_welcome.welcome")
-        small I18n.t("active_admin.dashboard_welcome.call_to_action")
+        span "Welcome to the Expedition Team Outreach Dashboard"
+        small do
+            span "For support contact"
+            a href: "mailto:tataihono.nikora@studentlife.org.nz", target: "_blank" do
+                "tataihono.nikora@studentlife.org.nz"
+            end
+        end
       end
     end
 

@@ -1,9 +1,3 @@
-$(function() {
-  $(window.applicationCache).bind("error", function() {
-    alert("There was an error when loading the cache manifest.");
-  });
-});
-
 if (!$.support.transition || $.browser.msie || (navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)))
   $.fn.transition = $.fn.animate;
 
@@ -113,7 +107,7 @@ var Router = Backbone.Router.extend({
             'disableDoubleClickZoom': false,
             'scrollwheel': false
           };
-          googlemap.addMapToCanvas( mapCanvas, myOptions, 53.6666667, 23.8333333);
+          googlemap.addMapToCanvas( mapCanvas, myOptions, lat, lng);
           googlemap.autocomplete( $('#locality')[0] );
           googlemap.refresh();
         } else {
