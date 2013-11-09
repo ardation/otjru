@@ -7,8 +7,8 @@ ActiveAdmin.register Outreach do
     column :sms, sortable: false
     column("Logo") {|o| link_to o.logo_file_name, o.logo.url}
     column("Single Locale") {|o| if o.english_only? then status_tag("Yes") else status_tag("No") end}
-    column("Primary Locale") {|o| o.primary_locale.upcase}
-    column("Secondary Locale") {|o| if o.english_only? then "N/A" else o.secondary_locale.upcase end}
+    column("Primary Locale") {|o| o.primary_locale.upcase unless o.primary_locale.nil?}
+    column("Secondary Locale") {|o| if o.english_only? then "N/A" else (o.secondary_locale.upcase unless o.secondary_locale.nil?) end}
     default_actions
   end
 
