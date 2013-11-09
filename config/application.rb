@@ -58,5 +58,7 @@ module Otjru
     config.assets.version = '1.0'
 
     ENV["RAILS_ASSET_ID"] = ""
+
+    config.assets.initialize_on_precompile = false
   end
 end
