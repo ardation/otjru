@@ -5,7 +5,7 @@ Otjru::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-  get '/:locale' => redirect("/%{locale}/step1")
+  get '/:locale' => 'home#index'
   get '/:locale/:page' => 'home#index'
   get '/:locale/page/:page' => 'page#home'
   post '/data' => 'data#index'

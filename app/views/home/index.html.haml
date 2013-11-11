@@ -13,19 +13,19 @@
     - unless @outreach.english_only?
       %a#language.clickable{"data-bypass" => "", href: "/#{@lang}"}= t 'misc.switch', locale: @lang
     %a#terms.clickable{href: "terms"}= t 'misc.terms_and_conditions'
-:javascript
-  var I18n = {};
-  I18n.locale = "#{I18n.locale}";
-  I18n.step6_error_fname = "#{t 'details.name.first_name.error'}";
-  I18n.step6_error_lname = "#{t :'details.name.last_name.error'}";
-  I18n.step6_error_gender = "#{t 'details.gender.error'}";
-  I18n.step6_error_mobile = "#{t 'details.mobile.error'}";
-  I18n.step6_error_email = "#{t 'details.email.error'}";
-  I18n.step6_error_university = "#{t 'details.university.error'}";
-  I18n.step6_error_faculty = "#{t 'details.faculty.error'}";
-  I18n.step6_error_year = "#{t 'details.year.error'}";
-  var location = {};
-  location.lat = "#{@outreach.lat}";
-  location.lng = "#{@outreach.lng}";
-%script{src: "http://maps.google.com/maps/api/js?libraries=places&sensor=true&language=#{I18n.locale}", type: "text/javascript"}
-%script{src: asset_path('config.js'), type: "text/javascript"}
+  :javascript
+    var I18n = {};
+    I18n.locale = "#{I18n.locale}";
+    I18n.step6_error_fname = "#{t 'details.name.first_name.error'}";
+    I18n.step6_error_lname = "#{t :'details.name.last_name.error'}";
+    I18n.step6_error_gender = "#{t 'details.gender.error'}";
+    I18n.step6_error_mobile = "#{t 'details.mobile.error'}";
+    I18n.step6_error_email = "#{t 'details.email.error'}";
+    I18n.step6_error_university = "#{t 'details.university.error'}";
+    I18n.step6_error_faculty = "#{t 'details.faculty.error'}";
+    I18n.step6_error_year = "#{t 'details.year.error'}";
+    var coordinates = {};
+    coordinates.lat = "#{@outreach.lat}";
+    coordinates.lng = "#{@outreach.lng}";
+  %script{src: "http://maps.google.com/maps/api/js?libraries=places&sensor=true&language=#{I18n.locale}".html_safe, type: "text/javascript"}
+  %script{src: asset_path('config.js'), type: "text/javascript"}
