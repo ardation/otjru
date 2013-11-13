@@ -1,159 +1,102 @@
 ru:
-  step1:
-    question: Заполни анкету и получи классынй ежедневник студента
-    get_journey: 
-    prize_message: 
-  step2:
-    question: 
-    error: 
-    placeholder: 
-  step3:
-    question: 
-    option1: 
-    option2: 
-    option3: 
-    option4: 
-    error: 
-  step4:
-    question: 
-    option1: 
-    option2: 
-    option3: 
-    option4: 
-    error: 
-  step5:
-    question: 
-    option1: 
-    option2: 
-    option3: 
-    error: 
-  step6a:
-    question: 
-    option1: 
-    option2: 
-    option3: 
-    error: 
-  step6b:
-    question: 
-    option1: 
-    option2: 
-    option3: 
-    error: 
-    text_answer: 
   details:
-    titles:
-      main: 
-      personal: 
-      education: 
-    name:
-      title: 
-      first_name:
-        placeholder: 
-        error: 
-      last_name:
-        placeholder: 
-        error: 
-    gender:
-      title: 
-      male: 
-      female: 
-      error: 
-    university:
-      title: 
-      error: 
-    mobile:
-      title: 
-      error: 
-    faculty:
-      title: 
-      error: 
     email:
-      title: 
       error: 
-    year:
       title: 
+    faculty:
       error: 
+      title: 
+    gender:
+      error: 
+      female: 
+      male: 
+      title: 
+    mobile:
+      error: 
+      title: 
+    name:
+      first_name:
+        error: 
+        placeholder: 
+      last_name:
+        error: 
+        placeholder: 
+      title: 
     title:
       education: 
+    titles:
+      education: 
+      main: 
+      personal: 
+    university:
+      error: 
+      title: 
+    year:
+      error: 
+      title: 
+  misc:
+    back: 
+    finish: 
+    forgot: 
+    next: 
+    otj: 
+    reset: 
+    start: 
+    student_life: 
+    switch: 
+    terms_and_conditions: 
+  step1:
+    get_journey: 
+    prize_message: 
+    question: Заполни анкету и получи классынй ежедневник студента
+  step2:
+    error: 
+    placeholder: 
+    question: 
+  step3:
+    error: 
+    option1: 
+    option2: 
+    option3: 
+    option4: 
+    question: 
+  step4:
+    error: 
+    option1: 
+    option2: 
+    option3: 
+    option4: 
+    question: 
+  step5:
+    error: 
+    option1: 
+    option2: 
+    option3: 
+    question: 
+  step6a:
+    error: 
+    option1: 
+    option2: 
+    option3: 
+    question: 
+  step6b:
+    error: 
+    option1: 
+    option2: 
+    option3: 
+    question: 
+    text_answer: 
   step7:
     processing: 
   step8:
     message: 
-  misc:
-    finish: 
-    reset: 
-    terms_and_conditions: 
-    back: 
-    start: 
-    forgot: 
-    next: 
-    data_entry: 
-    switch: 
-    otj: 
-    student_life: 
-    switch_tag: 
-  devise:
-    confirmations:
-      confirmed: 
-      send_instructions: 
-      send_paranoid_instructions: 
-    failure:
-      already_authenticated: 
-      inactive: 
-      invalid: 
-      invalid_token: 
-      locked: 
-      not_found_in_database: 
-      timeout: 
-      unauthenticated: 
-      unconfirmed: 
-    mailer:
-      confirmation_instructions:
-        subject: 
-      reset_password_instructions:
-        subject: 
-      unlock_instructions:
-        subject: 
-    omniauth_callbacks:
-      failure: 
-      success: 
-    passwords:
-      no_token: 
-      send_instructions: 
-      send_paranoid_instructions: 
-      updated: 
-      updated_not_active: 
-    registrations:
-      destroyed: 
-      signed_up: 
-      signed_up_but_inactive: 
-      signed_up_but_locked: 
-      signed_up_but_unconfirmed: 
-      updated: 
-      update_needs_confirmation: 
-    sessions:
-      signed_in: 
-      signed_out: 
-    unlocks:
-      send_instructions: 
-      send_paranoid_instructions: 
-      unlocked: 
-  errors:
-    messages:
-      already_confirmed: 
-      confirmation_period_expired: 
-      expired: 
-      not_found: 
-      not_locked: 
-      not_saved: 
   i18n:
     transliterate:
       rule: 
-  required: 
   admin_user: 
   outreach: 
   activerecord:
     models:
       admin: 
-      outreach: 
+  required: 
   update: 
