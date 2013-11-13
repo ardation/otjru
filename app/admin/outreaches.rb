@@ -39,10 +39,9 @@ ActiveAdmin.register Outreach do
   end
 
   collection_action :pull_translations do
-    heroku = Heroku::API.new
-    Localeapp::CLI::Pull.new.execute if Rails.env.production?
     flash[:notice] = "Successfully pulled translations from localeapp"
     redirect_to :action => :index
+    heroku = Heroku::API.new
     heroku.post_ps_restart('otjru', 'ps' => 'web.1') 
   end
 end
