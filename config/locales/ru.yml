@@ -1,4 +1,9 @@
 ru:
+  activerecord:
+    models:
+      admin: 
+      outreach: 
+  admin_user: 
   details:
     email:
       error: 
@@ -34,6 +39,9 @@ ru:
     year:
       error: 
       title: 
+  i18n:
+    transliterate:
+      rule: 
   misc:
     back: 
     finish: 
@@ -45,6 +53,8 @@ ru:
     student_life: 
     switch: 
     terms_and_conditions: 
+  outreach: 
+  required: 
   step1:
     get_journey: 
     prize_message: 
@@ -90,13 +100,4 @@ ru:
     processing: 
   step8:
     message: 
-  i18n:
-    transliterate:
-      rule: 
-  admin_user: 
-  outreach: 
-  activerecord:
-    models:
-      admin: 
-  required: 
   update: 

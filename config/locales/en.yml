@@ -1,4 +1,9 @@
 en:
+  activerecord:
+    models:
+      admin: Admin
+      outreach: Outreaches
+  admin_user: Admin Users
   details:
     email:
       error: Enter a valid email address
@@ -34,6 +39,9 @@ en:
     year:
       error: Select your year at University
       title: Year
+  i18n:
+    transliterate:
+      rule: {}
   misc:
     back: Back
     finish: Finish
@@ -45,9 +53,11 @@ en:
     student_life: Student Christian Movement
     switch: Change to English
     terms_and_conditions: Terms and Conditions
+  outreach: Outreach
+  required: required
   step1:
     get_journey: GET ON THE JOURNEY
-    prize_message: Complete this survey and receive a cool student planner!
+    prize_message: Complete this survey and receive a chance to win a Mountain Bike!
     question: 
   step2:
     error: Enter a location
@@ -66,7 +76,7 @@ en:
     option2: Intimacy and Love
     option3: Does God answer prayer?
     option4: Connecting with the Divine
-    question: I would be interested in receiving a planner or article on...
+    question: I would be interested in receiving an article on...
   step5:
     error: Make a selection
     option1: 'No'
@@ -90,14 +100,4 @@ en:
     processing: Processing
   step8:
     message: By now you should have your confirmation of entry. Good Luck!
-  i18n:
-    transliterate:
-      rule: {}
-  admin_user: Admin Users
-  outreach: Outreach
-  activerecord:
-    models:
-      admin: Admin
-      outreach: Outreaches
-  required: required
   update: Update %{model}

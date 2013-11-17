@@ -1,10 +1,15 @@
 pl:
+  activerecord:
+    models:
+      admin: Admin
+      outreach: Wydarzenia
+  admin_user: Administratorzy
   details:
     email:
-      error: Wprowadź twój adres email
+      error: Wprowadź swój adres emailowy
       title: Email
     faculty:
-      error: Wpisz twój Wydział
+      error: Wpisz swój Wydział
       title: Wydział
     gender:
       error: Podaj swoją płeć
@@ -12,39 +17,44 @@ pl:
       male: Mężczyzna
       title: Płeć
     mobile:
-      error: Wprowadź twój numer telefonu
-      title: Telefon Komórkowy
+      error: Wprowadź swój numer telefonu
+      title: Telefon komórkowy
     name:
       first_name:
-        error: Wpisz twoje imię
+        error: Wpisz swoje imię
         placeholder: Imię
       last_name:
-        error: Wpisz twoje nazwisko
+        error: Wpisz swoje nazwisko
         placeholder: Nazwisko
       title: O sobie
     title:
-      education: 
+      education: Wykształcenie
     titles:
       education: Wykształcenie
-      main: Tell us about yourself
+      main: Opowiedz nam o sobie
       personal: Osobisty
     university:
-      error: Wpisz twoją Uczelnię
+      error: Wpisz swoją Uczelnię
       title: Uczelnia
     year:
-      error: Wybierz twój rok studiów
+      error: Wybierz swój rok studiów
       title: Rok
+  i18n:
+    transliterate:
+      rule: 
   misc:
-    back: 
-    finish: Zakończ
-    forgot: Rozpocznij
+    back: Powrót
+    finish: Koniec
+    forgot: Zapomniałeś o czymś?
     next: Dalej
-    otj: GOTUJ SIĘ DO PODRÓŻY
-    reset: 
-    start: 
-    student_life: Studenckie Życie
-    switch: Polska
-    terms_and_conditions: 
+    otj: W PODRÓŻY
+    reset: Zacznij od nowa
+    start: Start
+    student_life: Ruch Akademicki "Pod Prąd"
+    switch: English
+    terms_and_conditions: Zasady użytkowania
+  outreach: Zasięg
+  required: Wymagany
   step1:
     get_journey: GOTUJ SIĘ DO PODRÓŻY
     prize_message: Wypełnij tę ankietę i otrzymaj szansę wygrania roweru
@@ -54,49 +64,40 @@ pl:
     placeholder: Wybierz miejsce
     question: Jakie jest najfajniejsze miejsce na świecie w jakim byłeś?
   step3:
-    error: swój własny wariant
+    error: Wybierz odpowiedź
     option1: jestem u szczytu sukcesu
     option2: wspinam się na szczyt
     option3: płynę z prądem
     option4: ugrzązłem w błocie
-    question: Życie to podróż. W jakim miejscu w swojej podróży znajdujesz się teraz?
+    question: Życie to podróż. W jakim miejscu swojej podróży znajdujesz się teraz?
   step4:
     error: Wybierz odpowiedź
-    option1: Sekrety dobrego Lidera
+    option1: Sekrety dobrego lidera
     option2: Intymność i Miłość
     option3: Czy Bóg odpowiada na modlitwę?
     option4: Kontakt z Bogiem
-    question: Byłbym zainteresowany otrzymaniem planera lub artykułu na temat...
+    question: Byłbym zainteresowany otrzymaniem artykułu na temat...
   step5:
-    error: Wybierz odpowiedź
+    error: Wybierz
     option1: Nie
     option2: Może
     option3: Tak
-    question: Czy w swojej życiowej podróży masz osobistą relację z Jezusem Chrystusem?
+    question: Czy w duchowej podróży swego życia masz osobistą więź z Jezusem Chrystusem?
   step6a:
     error: Wybierz odpowiedź
     option1: Nie
     option2: Może
     option3: Tak
-    question: Czy byłbyś zainteresowany rozmową o tym jak nawiązać przyjaźń z Jezusem Chrystusem?
+    question: Czy byłbyś zainteresowany rozmową o tym, jak nawiązać osobistą więź z Jezusem Chrystusem?
   step6b:
     error: Wybierz odpowiedź
     option1: Nie
     option2: Może
     option3: Tak
-    question: Czy chciałbyś pomóc innym studentom na twoim uniwersytecie poznawać Jezusa?
-    text_answer: Napisz nam swoją odpowiedź
+    question: Czy chciałbyś pomóc innym studentom na twoim uniwersytecie nawiązać więź Jezusa?
+    text_answer: Rozwiń swoją odpowiedź
   step7:
     processing: Przetwarzanie
   step8:
-    message: Od tego momentu powinieneś mieć potwierdzenie o rejestracji. Powodzenia!
-  i18n:
-    transliterate:
-      rule: 
-  admin_user: 
-  outreach: 
-  activerecord:
-    models:
-      admin: 
-  required: 
+    message: Potwierdzenie o rejestracji powinno już dotrzeć do Ciebie. Życzymy wygranej!
   update: 
