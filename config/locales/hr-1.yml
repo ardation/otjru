@@ -1,0 +1,103 @@
+hr-1:
+  activerecord:
+    models:
+      admin: 
+      outreach: 
+  admin_user: 
+  details:
+    email:
+      error: Unesi valjanu email adresu
+      title: Email
+    faculty:
+      error: Unesi naziv svoga fakulteta
+      title: Fakultet
+    gender:
+      error: Odaberi svoj spol
+      female: Žensko
+      male: Muško
+      title: Spol
+    mobile:
+      error: Unesi valjan broj mobitela
+      title: Mobitel
+    name:
+      first_name:
+        error: Unesi svoje ime
+        placeholder: 'Ime '
+      last_name:
+        error: Unesi svoje prezime
+        placeholder: Prezime
+      title: Ime i prezime
+    title:
+      education: Obrazovanje
+    titles:
+      education: Obrazovanje
+      main: Reci nam nešto o sebi
+      personal: Osobni podaci
+    university:
+      error: Unesi naziv svoga sveučilišta
+      title: Sveučilište
+    year:
+      error: Koja si godina na fakultetu
+      title: Godina na fakultetu
+  i18n:
+    transliterate:
+      rule: 
+  misc:
+    back: 
+    finish: Završi
+    forgot: Nešto si zaboravio?
+    next: Sljedeće
+    otj: Na putovanju
+    reset: poništi
+    start: Početak
+    student_life: Vrlovazno
+    switch: Hrvatski
+    terms_and_conditions: Uvjeti korištenja
+  outreach: 
+  required: 
+  step1:
+    get_journey: KRENI NA PUTOVANJE
+    prize_message: Popuni ovaj upitnik i možda osvojiš Apple iPad
+    question: 
+  step2:
+    error: Unesi mjesto
+    placeholder: Unesi mjesto
+    question: Koje je po tvome mišljenju najbolje mjesto na svijetu koje si posjetio/posjetila?
+  step3:
+    error: Odaberi jedno od ponuđenog
+    option1: nalazim se na vrhuncu uspjeha
+    option2: penjem se prema vrhu
+    option3: ne razmišljam previše o sljedećem potezu
+    option4: zapeo sam
+    question: Život je putovanje. Gdje se ti na tom putovanju trenutno nalaziš?
+  step4:
+    error: Odaberi jedno od ponuđenog
+    option1: U svijetu rata, gdje mogu pronaći mir?
+    option2: Je li dovoljno živjeti dobrim, moralnim životom?
+    option3: Znanstvenici i njihovi bogovi
+    option4: Kako imati jadan seksualni život
+    question: Zanima me članak o...
+  step5:
+    error: Odaberi jedno od ponuđenog
+    option1: Ne
+    option2: Možda
+    option3: Da
+    question: Na duhovnom putovanju života, imaš li osoban odnos s Isusom Kristom?
+  step6a:
+    error: Odaberi jedno od ponuđenog
+    option1: Ne
+    option2: Možda
+    option3: Da
+    question: Želiš porazgovarati s nekim o tome kako KRENUTI NA PUTOVANJE s Kristom?
+  step6b:
+    error: Odaberi jedno od ponuđenog
+    option1: Ne
+    option2: Možda
+    option3: Da
+    question: Želiš pomoći da i drugi studenti u tvome gradu upoznaju Krista?
+    text_answer: Obrazloži svoj odgovor
+  step7:
+    processing: Obrada
+  step8:
+    message: Stigla ti je potvrda prijave. Sretno!
+  update: 
