@@ -1,0 +1,103 @@
+en-RO:
+  activerecord:
+    models:
+      admin: Admin
+      outreach: Outreaches
+  admin_user: Admin Users
+  details:
+    email:
+      error: Enter a valid email address
+      title: Email
+    faculty:
+      error: Enter your Faculty
+      title: Faculty
+    gender:
+      error: Select your gender
+      female: Female
+      male: Male
+      title: Gender
+    mobile:
+      error: Enter a valid phone number
+      title: Mobile
+    name:
+      first_name:
+        error: Enter your first name
+        placeholder: First
+      last_name:
+        error: Enter your last name
+        placeholder: Last
+      title: Name
+    title:
+      education: Education
+    titles:
+      education: Education
+      main: Tell us about yourself
+      personal: Personal
+    university:
+      error: Enter your University
+      title: University
+    year:
+      error: Select your year at University
+      title: Year
+  i18n:
+    transliterate:
+      rule: 
+  misc:
+    back: Back
+    finish: Finish
+    forgot: Forgetting something?
+    next: Next
+    otj: On The Journey
+    reset: reset
+    start: Start
+    student_life: Student Christian Movement
+    switch: Change to English
+    terms_and_conditions: Terms and Conditions
+  outreach: Outreach
+  required: required
+  step1:
+    get_journey: GET ON THE JOURNEY
+    prize_message: Complete this survey and receive a chance to win a Samsung Galaxy Tab 3 Tablet
+    question: 
+  step2:
+    error: Enter a location
+    placeholder: Enter a location
+    question: What is the coolest place you've been in the world?
+  step3:
+    error: Make a selection
+    option1: I am on the pinnacle of success
+    option2: Going up the summit
+    option3: Going with the flow
+    option4: Stuck in a swamp
+    question: Life is a journey.  Where are you located on it right now?
+  step4:
+    error: Make a selection
+    option1: Secrets of a good Leader
+    option2: Intimacy and Love
+    option3: Does God answer prayer?
+    option4: Connecting with the Divine
+    question: I would be interested in receiving an article on...
+  step5:
+    error: Make a selection
+    option1: 'No'
+    option2: Maybe
+    option3: 'Yes'
+    question: In life's spiritual journey do you have a personal relationship with Jesus Christ?
+  step6a:
+    error: Make a selection
+    option1: 'No'
+    option2: Maybe
+    option3: 'Yes'
+    question: Would you be interested in talking with someone about how to BEGIN A JOURNEY with Jesus Christ?
+  step6b:
+    error: Make a selection
+    option1: 'No'
+    option2: Maybe
+    option3: 'Yes'
+    question: Would you like to help other students at your university know Jesus?
+    text_answer: Tell us about your answer
+  step7:
+    processing: Processing
+  step8:
+    message: By now you should have your confirmation of entry. Good Luck!
+  update: Update %{model}

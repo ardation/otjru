@@ -22,7 +22,7 @@ hr-1:
     name:
       first_name:
         error: Unesi svoje ime
-        placeholder: 'Ime '
+        placeholder: ! 'Ime '
       last_name:
         error: Unesi svoje prezime
         placeholder: Prezime

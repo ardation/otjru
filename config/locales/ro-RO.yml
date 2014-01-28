@@ -1,0 +1,103 @@
+ro-RO:
+  activerecord:
+    models:
+      admin: 
+      outreach: 
+  admin_user: 
+  details:
+    email:
+      error: Introdu o adresă de email validă
+      title: E-mail
+    faculty:
+      error: La ce Facultate studiezi?
+      title: La ce Facultate studiezi?
+    gender:
+      error: Selectează genul (M/F)
+      female: Feminin
+      male: Masculin
+      title: Gen
+    mobile:
+      error: Introdu un număr de telefon valid
+      title: Număr telefon
+    name:
+      first_name:
+        error: Completează prenumele
+        placeholder: Prenume
+      last_name:
+        error: Completează numele
+        placeholder: Nume de familie
+      title: Nume
+    title:
+      education: Despre ce studiezi
+    titles:
+      education: Despre ce studiezi
+      main: Cate ceva despre tine
+      personal: Despre tine
+    university:
+      error: La ce Universitate studiezi?
+      title: Universitatea
+    year:
+      error: În ce an de studiu ești?
+      title: În ce an de studiu ești?
+  i18n:
+    transliterate:
+      rule: 
+  misc:
+    back: 
+    finish: GATA!
+    forgot: Ai uitat ceva?
+    next: Mai departe
+    otj: HAI în CĂLĂTORIE!
+    reset: Resetează
+    start: Start
+    student_life: 
+    switch: Change language (schimbă limba)
+    terms_and_conditions: 
+  outreach: 
+  required: 
+  step1:
+    get_journey: HAI în CĂLĂTORIE!
+    prize_message: Completează acest chestionar și poți câștiga o tableta Samsung Galaxy Tab3
+    question: 
+  step2:
+    error: Scrie un loc
+    placeholder: Scrie un loc
+    question: Care este cel mai tare loc pe care l-ai vizitat? (din lume)
+  step3:
+    error: Alege un răspuns
+    option1: Sunt în vârful piramidei succesului
+    option2: Sunt în urcare spre vârf
+    option3: Merg cu valul
+    option4: Blocat într-o mlaștină
+    question: Viața este o călătorie. Unde te afli tu acum?
+  step4:
+    error: Alege un răspuns
+    option1: Secretele unui lider bun
+    option2: Intimitate și Dragoste
+    option3: Răspunde Dumnezeu la rugăciuni?
+    option4: Conectarea cu Divinitatea
+    question: Aș fi interesat să primesc o agendă sau un articol despre...
+  step5:
+    error: Alege un răspuns
+    option1: Nu
+    option2: Poate
+    option3: Da
+    question: În călătoria ta spirituală, ai o relație personală cu Iisus Hristos?
+  step6a:
+    error: Alege un răspuns
+    option1: Nu
+    option2: Poate
+    option3: Da
+    question: Ai fi interesat să vorbești cu cineva despre CUM SĂ ÎNCEPI o călătorie cu Iisus Hristos?
+  step6b:
+    error: Ai fi interesat să vorbești cu cineva despre CUM SĂ ÎNCEPI o călătorie cu Iisus Hristos?
+    option1: Nu
+    option2: Poate
+    option3: Da
+    question: Ai dori să ajuți alți studenți din universitatea ta să-l cunoască pe Iisus?
+    text_answer: Scrie câteva detalii despre răspunsul tău
+  step7:
+    processing: În curs de procesare...
+  step8:
+    message: Până în acest moment ar trebui să fi primit confirmarea înscrierii. Mult succes!
+  update: 
