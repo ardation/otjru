@@ -28,10 +28,10 @@ ro-RO:
         placeholder: Nume de familie
       title: Nume
     title:
-      education: Despre ce studiezi
+      education: Unde studiezi
     titles:
-      education: Despre ce studiezi
-      main: Cate ceva despre tine
+      education: Unde studiezi
+      main: Câte ceva despre tine
       personal: Despre tine
     university:
       error: La ce Universitate studiezi?
@@ -76,7 +76,7 @@ ro-RO:
     option2: Intimitate și Dragoste
     option3: Răspunde Dumnezeu la rugăciuni?
     option4: Conectarea cu Divinitatea
-    question: Aș fi interesat să primesc o agendă sau un articol despre...
+    question: Mi-ar plăcea să primesc o agendă sau un articol despre...
   step5:
     error: Alege un răspuns
     option1: Nu
