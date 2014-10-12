@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
-ruby "2.0.0"
+ruby "2.1.2"
 
 # Core
-gem 'rails', '3.2.13'
+gem 'rails', '3.2.19'
 gem 'pg'
 gem 'json'
 gem "httparty", "~> 0.9.0"
@@ -43,6 +43,7 @@ group :development do
   gem 'rails-erd'
   gem 'foreman'
   gem 'rails-footnotes', '>= 3.7.9'
-  gem "better_errors"
-  gem "binding_of_caller"
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'dotenv'
 end
