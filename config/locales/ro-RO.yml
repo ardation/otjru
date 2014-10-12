@@ -1,5 +1,9 @@
 ro-RO:
   activerecord:
+    attributes:
+      admin_user:
+        email: 
+        password: 
     models:
       admin: 
       outreach: 
@@ -37,8 +41,36 @@ ro-RO:
       error: La ce Universitate studiezi?
       title: Universitatea
     year:
-      error: În ce an de studiu ești?
-      title: În ce an de studiu ești?
+      error: "În ce an de studiu ești?"
+      title: "În ce an de studiu ești?"
+  formtastic:
+    hints:
+      admin_user:
+        admin_user:
+          new:
+            email: 
+            password: 
+            remember_me: 
+    labels:
+      admin_user:
+        admin_user:
+          new:
+            email: 
+            password: 
+    placeholders:
+      admin_user:
+        admin_user:
+          new:
+            email: 
+            password: 
+    required: 
+  helpers:
+    label:
+      admin_user:
+        admin_user:
+          new:
+            email: 
+            password: 
   i18n:
     transliterate:
       rule: 
@@ -82,7 +114,7 @@ ro-RO:
     option1: Nu
     option2: Poate
     option3: Da
-    question: În călătoria ta spirituală, ai o relație personală cu Iisus Hristos?
+    question: "În călătoria ta spirituală, ai o relație personală cu Iisus Hristos?"
   step6a:
     error: Alege un răspuns
     option1: Nu
@@ -97,7 +129,7 @@ ro-RO:
     question: Ai dori să ajuți alți studenți din universitatea ta să-l cunoască pe Iisus?
     text_answer: Scrie câteva detalii despre răspunsul tău
   step7:
-    processing: În curs de procesare...
+    processing: "În curs de procesare..."
   step8:
     message: Până în acest moment ar trebui să fi primit confirmarea înscrierii. Mult succes!
   update: 

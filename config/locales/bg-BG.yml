@@ -1,0 +1,135 @@
+bg-BG:
+  activerecord:
+    attributes:
+      admin_user:
+        email: 
+        password: 
+    models:
+      admin: 
+      outreach: 
+  admin_user: 
+  details:
+    email:
+      error: "Въведи валидна електронна поща"
+      title: "Електронна поща"
+    faculty:
+      error: "Въведи Факултет"
+      title: "Факултет"
+    gender:
+      error: "Избери пол:"
+      female: "Женски"
+      male: "Мъжки"
+      title: "Фамилия"
+    mobile:
+      error: "Въведи валиден телефонен номер"
+      title: "Мобилен телефон"
+    name:
+      first_name:
+        error: "Въведи първото си име"
+        placeholder: "Име"
+      last_name:
+        error: "Въведи последното си име"
+        placeholder: "Презиме"
+      title: "Име"
+    title:
+      education: "Образование"
+    titles:
+      education: "Образование"
+      main: 
+      personal: "Личен"
+    university:
+      error: "Въведи твоя Университет"
+      title: "Унивеситет"
+    year:
+      error: "Кой курс в Университета си?"
+      title: "Година"
+  formtastic:
+    hints:
+      admin_user:
+        admin_user:
+          new:
+            email: 
+            password: 
+            remember_me: 
+    labels:
+      admin_user:
+        admin_user:
+          new:
+            email: 
+            password: 
+    placeholders:
+      admin_user:
+        admin_user:
+          new:
+            email: 
+            password: 
+    required: 
+  helpers:
+    label:
+      admin_user:
+        admin_user:
+          new:
+            email: 
+            password: 
+  i18n:
+    transliterate:
+      rule: 
+  misc:
+    back: 
+    finish: "Край"
+    forgot: "Забрави ли нещо?"
+    next: "Следващ"
+    otj: "На пътешествие"
+    reset: "Изчисти"
+    start: "Старт"
+    student_life: Student Life
+    switch: 
+    terms_and_conditions: 
+  outreach: 
+  required: 
+  step1:
+    get_journey: "ЗАПОЧНИ ПЪТЕШЕСТВИЕТО"
+    prize_message: "Попълни анкетата и участвай в томбола с подарък таблет PocketBook SURFpad 2"
+    question: 
+  step2:
+    error: "Въведи място"
+    placeholder: "Въведи място"
+    question: "Кое е най-интересното място в света на което си бил?"
+  step3:
+    error: "Избери отговор"
+    option1: "Аз съм на върха на успеха"
+    option2: "Катеря се към успеха"
+    option3: "Движа се по течението"
+    option4: "Затънал съм в блатото"
+    question: "Животът е пътешествие. Къде е се намираш ти в твоя житейски път?"
+  step4:
+    error: "Избери отговор"
+    option1: "Тайните на добрия Лидер"
+    option2: "Интимност и Любов"
+    option3: "Отговаря ли Бог на молитвите ни?"
+    option4: "Свързване с Бога"
+    question: "Заинтересован съм да получа статия на тема ..."
+  step5:
+    error: "Избери отговор"
+    option1: "Не"
+    option2: "Може би"
+    option3: "Да"
+    question: "По отношение на личното си духовно пътешествие, можеш ли да кажеш, че си християнин?"
+  step6a:
+    error: "Избери отговор"
+    option1: "Не"
+    option2: "Може би"
+    option3: "Да"
+    question: "Би ли искал да говориш с някого за това, как можеш да започнеш пътешествие в света на християнството."
+  step6b:
+    error: "Избери отговор"
+    option1: "Не"
+    option2: "Може би"
+    option3: "Да"
+    question: "Би ли искал да помогнеш на други студенти да знаят повече за християнството и Исус Христос?"
+    text_answer: "Кажи ни за твоя отговор"
+  step7:
+    processing: "Обработва се"
+  step8:
+    message: "Вече трпбва да сте получили потвърждение. Успех."
+  update: 

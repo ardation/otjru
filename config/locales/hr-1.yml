@@ -1,5 +1,9 @@
 hr-1:
   activerecord:
+    attributes:
+      admin_user:
+        email: 
+        password: 
     models:
       admin: 
       outreach: 
@@ -13,7 +17,7 @@ hr-1:
       title: Fakultet
     gender:
       error: Odaberi svoj spol
-      female: Žensko
+      female: "Žensko"
       male: Muško
       title: Spol
     mobile:
@@ -22,7 +26,7 @@ hr-1:
     name:
       first_name:
         error: Unesi svoje ime
-        placeholder: ! 'Ime '
+        placeholder: 'Ime '
       last_name:
         error: Unesi svoje prezime
         placeholder: Prezime
@@ -39,6 +43,34 @@ hr-1:
     year:
       error: Koja si godina na fakultetu
       title: Godina na fakultetu
+  formtastic:
+    hints:
+      admin_user:
+        admin_user:
+          new:
+            email: 
+            password: 
+            remember_me: 
+    labels:
+      admin_user:
+        admin_user:
+          new:
+            email: 
+            password: 
+    placeholders:
+      admin_user:
+        admin_user:
+          new:
+            email: 
+            password: 
+    required: 
+  helpers:
+    label:
+      admin_user:
+        admin_user:
+          new:
+            email: 
+            password: 
   i18n:
     transliterate:
       rule: 
@@ -69,7 +101,7 @@ hr-1:
     option2: penjem se prema vrhu
     option3: ne razmišljam previše o sljedećem potezu
     option4: zapeo sam
-    question: Život je putovanje. Gdje se ti na tom putovanju trenutno nalaziš?
+    question: "Život je putovanje. Gdje se ti na tom putovanju trenutno nalaziš?"
   step4:
     error: Odaberi jedno od ponuđenog
     option1: U svijetu rata, gdje mogu pronaći mir?
@@ -88,13 +120,13 @@ hr-1:
     option1: Ne
     option2: Možda
     option3: Da
-    question: Želiš porazgovarati s nekim o tome kako KRENUTI NA PUTOVANJE s Kristom?
+    question: "Želiš porazgovarati s nekim o tome kako KRENUTI NA PUTOVANJE s Kristom?"
   step6b:
     error: Odaberi jedno od ponuđenog
     option1: Ne
     option2: Možda
     option3: Da
-    question: Želiš pomoći da i drugi studenti u tvome gradu upoznaju Krista?
+    question: "Želiš pomoći da i drugi studenti u tvome gradu upoznaju Krista?"
     text_answer: Obrazloži svoj odgovor
   step7:
     processing: Obrada

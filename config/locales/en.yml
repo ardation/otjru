@@ -1,5 +1,9 @@
 en:
   activerecord:
+    attributes:
+      admin_user:
+        email: Email
+        password: Password
     models:
       admin: Admin
       outreach: Outreaches
@@ -39,6 +43,34 @@ en:
     year:
       error: Select your year at University
       title: Year
+  formtastic:
+    hints:
+      admin_user:
+        admin_user:
+          new:
+            email: 
+            password: 
+            remember_me: 
+    labels:
+      admin_user:
+        admin_user:
+          new:
+            email: 
+            password: 
+    placeholders:
+      admin_user:
+        admin_user:
+          new:
+            email: 
+            password: 
+    required: required
+  helpers:
+    label:
+      admin_user:
+        admin_user:
+          new:
+            email: 
+            password: 
   i18n:
     transliterate:
       rule: {}
@@ -73,7 +105,7 @@ en:
   step4:
     error: Make a selection
     option1: Secrets of a good Leader
-    option2: Intimacy and Love
+    option2: 
     option3: Does God answer prayer?
     option4: Connecting with the Divine
     question: I would be interested in receiving an article on...

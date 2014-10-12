@@ -1,5 +1,9 @@
 en-HR:
   activerecord:
+    attributes:
+      admin_user:
+        email: 
+        password: 
     models:
       admin: Admin
       outreach: Outreaches
@@ -39,6 +43,34 @@ en-HR:
     year:
       error: Select your year at University
       title: Year
+  formtastic:
+    hints:
+      admin_user:
+        admin_user:
+          new:
+            email: 
+            password: 
+            remember_me: 
+    labels:
+      admin_user:
+        admin_user:
+          new:
+            email: 
+            password: 
+    placeholders:
+      admin_user:
+        admin_user:
+          new:
+            email: 
+            password: 
+    required: 
+  helpers:
+    label:
+      admin_user:
+        admin_user:
+          new:
+            email: 
+            password: 
   i18n:
     transliterate:
       rule: 

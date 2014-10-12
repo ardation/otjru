@@ -1,5 +1,9 @@
 ru:
   activerecord:
+    attributes:
+      admin_user:
+        email: 
+        password: 
     models:
       admin: 
       outreach: 
@@ -39,6 +43,34 @@ ru:
     year:
       error: 
       title: 
+  formtastic:
+    hints:
+      admin_user:
+        admin_user:
+          new:
+            email: 
+            password: 
+            remember_me: 
+    labels:
+      admin_user:
+        admin_user:
+          new:
+            email: 
+            password: 
+    placeholders:
+      admin_user:
+        admin_user:
+          new:
+            email: 
+            password: 
+    required: 
+  helpers:
+    label:
+      admin_user:
+        admin_user:
+          new:
+            email: 
+            password: 
   i18n:
     transliterate:
       rule: 
@@ -58,7 +90,7 @@ ru:
   step1:
     get_journey: 
     prize_message: 
-    question: Заполни анкету и получи классынй ежедневник студента
+    question: "Заполни анкету и получи классынй ежедневник студента"
   step2:
     error: 
     placeholder: 

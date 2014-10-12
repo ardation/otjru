@@ -1,4 +1,4 @@
-pl:
+pl-W:
   activerecord:
     attributes:
       admin_user:
@@ -88,12 +88,12 @@ pl:
   outreach: Zasięg
   required: Wymagany
   step1:
-    get_journey: GOTUJ SIĘ DO PODRÓŻY
-    prize_message: Wypełnij tę ankietę i otrzymaj szansę wygrania roweru
-    question: 
+    get_journey: GET ON THE JOURNEY
+    prize_message: Wypełnij tę ankietę i otrzymaj szansę wygrania tabletu SAMSUNG GALAXY TAB3.
+    question: Wypełnij tę ankietę i otrzymaj szansę wygrania tabletu SAMSUNG GALAXY TAB3.
   step2:
-    error: Wybierz miejsce
-    placeholder: Wybierz miejsce
+    error: Wybierz miejsce (Zakopane, Kraków a może Warszawa)
+    placeholder: Wybierz miejsce (Zakopane, Kraków a może Warszawa)
     question: Jakie jest najfajniejsze miejsce na świecie w jakim byłeś?
   step3:
     error: Wybierz odpowiedź
@@ -104,29 +104,29 @@ pl:
     question: "Życie to podróż. W jakim miejscu swojej podróży znajdujesz się teraz?"
   step4:
     error: Wybierz odpowiedź
-    option1: Sekrety dobrego lidera
-    option2: Intymność i Miłość
-    option3: Czy Bóg odpowiada na modlitwę?
-    option4: Kontakt z Bogiem
-    question: Byłbym zainteresowany otrzymaniem artykułu na temat...
+    option1: Szkoleniem jak zarządzać sobą w czasie
+    option2: Kursem Alfa (najbardziej popularny na świecie kurs o wierze i poszukiwaniu celu w życiu)
+    option3: Kursem dla liderów
+    option4: innymi eventami organizowanymi przez RAPP (wyjazdy, DKFy, planszówki)
+    question: 'Byłbym zainteresowany:'
   step5:
     error: Wybierz
-    option1: Nie
-    option2: Może
-    option3: Tak
-    question: Czy w duchowej podróży swego życia masz osobistą więź z Jezusem Chrystusem?
+    option1: Nie wierzę w istnienie osobowego Boga
+    option2: Wierzę w Boga, ale szczerze mówiąc nie ma to większego wpływu na moje codzienne życie
+    option3: Bóg jest dla mnie bardzo ważny i widać to w moim życiu na co dzień
+    question: Gdzie jesteś w swojej duchowej podróży?
   step6a:
     error: Wybierz odpowiedź
     option1: Nie
     option2: Może
     option3: Tak
-    question: Czy byłbyś zainteresowany rozmową o tym, jak nawiązać osobistą więź z Jezusem Chrystusem?
+    question: Czy jesteś gotowy, aby spotkać się z kimś z RAPPu i porozmawiać na temat duchowej podróży człowieka?
   step6b:
     error: Wybierz odpowiedź
     option1: Nie
     option2: Może
     option3: Tak
-    question: Czy chciałbyś pomóc innym studentom na twoim uniwersytecie nawiązać więź Jezusa?
+    question: Czy chciałbyś rozwijać swoją relację z Bogiem z innymi wierzącymi studentami?
     text_answer: Rozwiń swoją odpowiedź
   step7:
     processing: Przetwarzanie
