@@ -1,9 +1,9 @@
-pl-W:
+pl-WA:
   activerecord:
     attributes:
       admin_user:
-        email: 
-        password: 
+        email:
+        password:
     models:
       admin: Admin
       outreach: Wydarzenia
@@ -48,32 +48,32 @@ pl-W:
       admin_user:
         admin_user:
           new:
-            email: 
-            password: 
-            remember_me: 
+            email:
+            password:
+            remember_me:
     labels:
       admin_user:
         admin_user:
           new:
-            email: 
-            password: 
+            email:
+            password:
     placeholders:
       admin_user:
         admin_user:
           new:
-            email: 
-            password: 
-    required: 
+            email:
+            password:
+    required:
   helpers:
     label:
       admin_user:
         admin_user:
           new:
-            email: 
-            password: 
+            email:
+            password:
   i18n:
     transliterate:
-      rule: 
+      rule:
   misc:
     back: Powrót
     finish: Koniec
@@ -132,4 +132,4 @@ pl-W:
     processing: Przetwarzanie
   step8:
     message: Potwierdzenie o rejestracji powinno już dotrzeć do Ciebie. Życzymy wygranej!
-  update: 
+  update:
